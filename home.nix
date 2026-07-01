@@ -197,7 +197,6 @@
             bracket-level-5 = "fg=cyan,bold";
             cursor-matchingbracket = "standout";
           };
-
         };
 
         initContent = lib.mkOrder 1500 ''

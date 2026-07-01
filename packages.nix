@@ -13,7 +13,6 @@
     fastfetch
     ffmpeg
     flatpak
-    gamescope
     gimp
     git
     gparted
@@ -92,18 +91,20 @@
     "Z /sys/class/powercap/intel-rapl:0/energy_uj 0444 root root - -"
   ];
 
-  programs.dconf.enable = true;
-  programs.gamescope.enable = true;
-  programs.steam.enable = true;
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
-  programs.nano.enable = false;
+  programs = {
+    nano.enable = false;
+    dconf.enable = true;
+    zsh.enable = true;
+    steam.enable = true;
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
   };
-
-  programs.zsh.enable = true;
-  users.users.solarfire.shell = pkgs.zsh;
 }
