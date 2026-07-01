@@ -13,6 +13,7 @@
     fastfetch
     ffmpeg
     flatpak
+    gamescope
     gimp
     git
     gparted
@@ -92,6 +93,7 @@
   ];
 
   programs.dconf.enable = true;
+  programs.gamescope.enable = true;
   programs.steam.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
