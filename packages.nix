@@ -94,6 +94,7 @@
   programs.steam.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
+  programs.nano.enable = false;
 
   programs.gnupg.agent = {
     enable = true;
