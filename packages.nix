@@ -40,7 +40,6 @@
     nvd
     obs-studio
     p7zip
-    pciutils
     prismlauncher
     protontricks
     qbittorrent
@@ -52,7 +51,6 @@
     sonarr
     spotify
     steam
-    stress
     tailscale
     typescript-language-server
     ventoy
@@ -61,8 +59,6 @@
     wl-clipboard
     x264
     xclicker
-    xwininfo
-    yt-dlp
     zsh
   ];
 
