@@ -55,7 +55,7 @@
     stress
     tailscale
     typescript-language-server
-    ventoy-full-qt
+    ventoy
     wget
     wine
     wl-clipboard
@@ -73,10 +73,11 @@
     okular
     qrca
     drkonqi
+    elisa
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-qt5-1.1.12"
+    "ventoy-1.1.12"
   ];
 
   security.wrappers.btop = {
