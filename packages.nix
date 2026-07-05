@@ -15,7 +15,6 @@
     flatpak
     gimp
     git
-    gparted
     headsetcontrol
     hyfetch
     ioquake3
