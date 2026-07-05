@@ -15,6 +15,7 @@
     flatpak
     gimp
     git
+    gparted
     headsetcontrol
     hyfetch
     ioquake3
@@ -75,6 +76,8 @@
   nixpkgs.config.permittedInsecurePackages = [
     "ventoy-1.1.12"
   ];
+
+  security.polkit.enablePkexecWrapper = true; # needed for gparted to run
 
   security.wrappers.btop = {
     source = "/run/current-system/sw/bin/btop";
