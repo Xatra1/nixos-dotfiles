@@ -23,7 +23,11 @@
           "modules" = [
             "title"
             "separator"
-            "os"
+            {
+              type = "command";
+              key = "OS";
+              text = "source /etc/os-release; echo \"$PRETTY_NAME Generation $(readlink /nix/var/nix/profiles/system | grep -o \"[0-9]*\")\"";
+            }
             "host"
             "kernel"
             "uptime"
