@@ -41,8 +41,6 @@
             "terminalfont"
             "cpu"
             "gpu"
-            "opengl"
-            "vulkan"
             "memory"
             "swap"
             "disk"
