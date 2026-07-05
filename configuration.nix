@@ -6,9 +6,9 @@
 }:
 {
   imports = [
+    ./home-manager
     ./graphics.nix
     ./hardware-configuration.nix
-    ./home.nix
     ./mountpoints.nix
     ./packages.nix
     ./services.nix
