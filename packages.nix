@@ -69,6 +69,7 @@
     qrca
     drkonqi
     elisa
+    kwin-x11
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
