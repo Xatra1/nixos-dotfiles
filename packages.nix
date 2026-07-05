@@ -13,6 +13,7 @@
     fastfetch
     ffmpeg
     flatpak
+    gcc
     gimp
     git
     gparted
@@ -36,10 +37,12 @@
     mpv
     neovim
     nixfmt
+    nodejs-slim
     noto-fonts
     nvd
     obs-studio
     p7zip
+    prettier
     prismlauncher
     protontricks
     qbittorrent
