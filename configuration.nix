@@ -64,6 +64,7 @@
   };
 
   nix.settings.auto-optimise-store = true;
+  nix.gc.automatic = true;
 
   # boring nerd shit. dont change
   system.stateVersion = "26.05"; # Did you read the comment?
