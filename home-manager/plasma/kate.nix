@@ -13,6 +13,7 @@
         };
 
         theme.name = "ayu Mirage";
+        brackets.automaticallyAddClosing = true;
       };
     };
   };
