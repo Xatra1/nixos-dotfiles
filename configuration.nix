@@ -59,12 +59,17 @@
         "wheel"
         "media"
       ];
+      shell = pkgs.zsh;
     };
-    solarfire.shell = pkgs.zsh;
   };
 
-  nix.settings.auto-optimise-store = true;
-  nix.gc.automatic = true;
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "daily";
+    };
+  };
 
   # boring nerd shit. dont change
   system.stateVersion = "26.05"; # Did you read the comment?
