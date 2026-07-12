@@ -1,6 +1,7 @@
 {
   imports = [
     <home-manager/nixos>
+    ./plasma
     ./fastfetch.nix
     ./git.nix
     ./kitty.nix
