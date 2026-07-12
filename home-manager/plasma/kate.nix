@@ -1,5 +1,16 @@
 {
   home-manager.users.solarfire.programs = {
+    plasma.configFile = {
+      katerc = {
+        General = {
+          "Startup Session" = "last";
+          "Restore Window Configuration" = true;
+        };
+
+        project.restoreProjectsForSessions = true;
+      };
+    };
+
     kate = {
       enable = true;
 
