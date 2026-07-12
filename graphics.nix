@@ -14,9 +14,6 @@
       extraPackages = with pkgs; [
         vpl-gpu-rt
         intel-media-driver
-        vulkan-extension-layer
-        vulkan-loader
-        vulkan-validation-layers
       ];
     };
   };
