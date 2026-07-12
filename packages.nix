@@ -24,6 +24,7 @@
     jellyfin
     jellyfin-rpc
     jellyfin-web
+    jq
     kdePackages.filelight
     kdePackages.kate
     kdePackages.kcolorchooser
@@ -36,6 +37,7 @@
     mkvtoolnix
     mpv
     neovim
+    nil
     nixfmt
     nodejs-slim
     noto-fonts
@@ -57,6 +59,7 @@
     tailscale
     typescript-language-server
     ventoy
+    vscode-langservers-extracted
     wget
     wine
     wl-clipboard
