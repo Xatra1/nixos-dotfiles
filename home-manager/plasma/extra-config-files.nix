@@ -8,7 +8,16 @@
     };
 
     kcminputrc."Libinput/1133/49291/Logitech G502 HERO Gaming Mouse".ScrollMethod = 4;
-    kdeglobals.KDE.DndBehavior = "MoveIfSameDevice";
+
+    kdeglobals = {
+      KDE.DndBehavior = "MoveIfSameDevice";
+
+      General = {
+        TerminalApplication = "kitty";
+        TerminalService = "kitty.desktop";
+      };
+    };
+
     ksmserverrc.General.loginMode = "emptySession";
 
     kwinrc = {
