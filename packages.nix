@@ -45,7 +45,6 @@
     obs-studio
     p7zip
     prettier
-    prismlauncher
     protontricks
     qbittorrent
     radarr

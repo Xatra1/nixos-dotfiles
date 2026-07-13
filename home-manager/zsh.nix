@@ -8,7 +8,6 @@
     enable = true;
     shellAliases = {
       dir = "dir -lshA --color=auto";
-      prismlauncher = "prismlauncher -d ~/.local/share/PrismLauncher/";
       cat = "bat";
       fastfetch = "hyfetch";
     };
