@@ -31,13 +31,11 @@
         NoiseStrength = 0;
       };
 
-      Effect-magiclamp.AnimationDuration = 500;
       Effect-overview.BorderActivate = 9;
 
       Plugins = {
         blurEnabled = true;
         frozenappEnabled = false;
-        magiclampEnabled = true;
         screenedgeEnabled = false;
         shakecursorEnabled = false;
         trackmouseEnabled = true;
