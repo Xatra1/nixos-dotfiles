@@ -13,7 +13,7 @@
     settings = {
       font_features = "MiracodeNF -liga";
 
-      background_opacity = 0.5;
+      background_opacity = 0.7;
       background_blur = 1;
 
       scrollback_lines = 1000;
