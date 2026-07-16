@@ -2,6 +2,7 @@
   imports = [
     <home-manager/nixos>
     ./plasma
+    ./btop.nix
     ./fastfetch.nix
     ./git.nix
     ./kitty.nix
