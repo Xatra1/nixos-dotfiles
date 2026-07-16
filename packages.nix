@@ -43,7 +43,6 @@ in
     nil
     nixfmt
     nodejs-slim
-    noto-fonts
     nvd
     obs-studio
     p7zip
@@ -72,6 +71,7 @@ in
 
   fonts.packages = with pkgs; [
     (callPackage ./miracode.nix { })
+    noto-fonts
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
