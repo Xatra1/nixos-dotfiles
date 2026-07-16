@@ -18,7 +18,7 @@ pkgs.stdenv.mkDerivation {
   dontUnpack = true;
 
   buildPhase = ''
-    nerd-font-patcher $src
+    nerd-font-patcher --complete $src
   '';
 
   installPhase = ''
