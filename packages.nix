@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  miracode-nerdfont = import ./miracode.nix;
+in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -65,6 +68,10 @@
     x264
     xclicker
     zsh
+  ];
+
+  fonts.packages = with pkgs; [
+    (callPackage ./miracode.nix { })
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
