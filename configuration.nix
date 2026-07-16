@@ -59,7 +59,11 @@
   };
 
   nix = {
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" ];
+    };
+
     gc = {
       automatic = true;
       dates = "daily";
