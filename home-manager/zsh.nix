@@ -107,8 +107,7 @@ in
         zstyle ':completion:*' menu select
         select-word-style bash
 
-        export EDITOR=/run/current-system/sw/bin/nvim
-        export SUDO_EDITOR=/run/current-system/sw/bin/nvim
+        export {EDITOR,SUDO_EDITOR}=${pkgs.neovim}/bin/nvim
         export PATH=$PATH:/home/solarfire/.local/bin:/home/solarfire/.cargo/bin
         export THEME_PATH=$ZDOTDIR/themes
         export PLUGIN_PATH=$ZDOTDIR/plugins
