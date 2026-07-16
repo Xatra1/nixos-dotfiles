@@ -40,7 +40,7 @@ in
       history = {
         append = true;
         ignoreAllDups = true;
-        path = "/home/solarfire/.config/zsh-history";
+        path = "/home/solarfire/.config/zsh/zsh-history";
         share = true;
         save = 10000;
         size = 10000;
