@@ -21,7 +21,7 @@
     headsetcontrol
     hyfetch
     (callPackage ./nix-derivations/ioquake3.nix { })
-    ironwail
+    (callPackage ./nix-derivations/ironwail.nix { })
     jellyfin
     jellyfin-rpc
     jellyfin-web
