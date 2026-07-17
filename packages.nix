@@ -20,13 +20,13 @@
     gparted
     headsetcontrol
     hyfetch
-    ioquake3
+    (callPackage ./nix-derivations/ioquake3.nix { })
     ironwail
     jellyfin
     jellyfin-rpc
     jellyfin-web
     jq
-    (callPackage ./derivations/kate-discord-rpc.nix { })
+    (callPackage ./nix-derivations/kate-discord-rpc.nix { })
     kdePackages.filelight
     kdePackages.kate
     kdePackages.kcolorchooser
@@ -69,7 +69,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    (callPackage ./derivations/miracode.nix { })
+    (callPackage ./nix-derivations/miracode.nix { })
     noto-fonts
   ];
 
