@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  miracode-nerdfont = import ./miracode.nix;
-in
 {
   nixpkgs.config.allowUnfree = true;
 
