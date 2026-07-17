@@ -71,6 +71,7 @@
 
     HISTFILE = "$XDG_STATE_HOME/bash_history";
 
+    ANDROID_USER_HOME = "$XDG_DATA_HOME/android";
     GNUPGHOME = "$XDG_DATA_HOME/gnupg";
     RUSTUP_HOME = "$XDG_DATA_HOME/rustup";
     CARGO_HOME = "$XDG_DATA_HOME/cargo";

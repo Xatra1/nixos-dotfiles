@@ -30,6 +30,7 @@ in
     programs.zsh = {
       enable = true;
       shellAliases = {
+        adb = "HOME=\"$XDG_DATA_HOME\"/android adb";
         dir = "dir -lshA --color=auto";
         cat = "bat";
         fastfetch = "hyfetch";
