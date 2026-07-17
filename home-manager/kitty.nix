@@ -16,7 +16,7 @@
       background_opacity = 0.7;
       background_blur = 1;
 
-      scrollback_lines = 1000;
+      scrollback_lines = 5000;
       wheel_scroll_multiplier = 1;
 
       cursor_shape = "block";
