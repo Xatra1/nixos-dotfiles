@@ -6,6 +6,7 @@
     ./easyeffects.nix
     ./fastfetch.nix
     ./git.nix
+    ./hyfetch.nix
     ./kitty.nix
     ./mpv.nix
     ./zsh.nix
