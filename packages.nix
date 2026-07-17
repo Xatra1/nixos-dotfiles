@@ -25,6 +25,7 @@
     jellyfin-rpc
     jellyfin-web
     jq
+    (callPackage ./derivations/kate-discord-rpc.nix { })
     kdePackages.filelight
     kdePackages.kate
     kdePackages.kcolorchooser
