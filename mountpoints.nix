@@ -1,6 +1,6 @@
 {
   fileSystems = {
-    "/".options = [ "compress=zstd:3" ];
+    "/".options = [ "compress=zstd:6" ];
 
     "/home" = {
       device = "/dev/disk/by-uuid/5f96abe4-3d47-4e88-a237-77988b131879";
