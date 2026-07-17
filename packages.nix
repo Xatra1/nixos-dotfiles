@@ -67,7 +67,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    (callPackage ./miracode.nix { })
+    (callPackage ./derivations/miracode.nix { })
     noto-fonts
   ];
 
