@@ -47,6 +47,7 @@
     p7zip
     prettier
     protontricks
+    protonup-qt
     qbittorrent
     radarr
     rust-analyzer
