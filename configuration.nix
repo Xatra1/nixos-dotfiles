@@ -83,6 +83,8 @@
       auto-optimise-store = true;
       experimental-features = [ "nix-command" ];
       use-xdg-base-directories = true;
+      max-jobs = 1;
+      cores = 16;
     };
 
     gc = {
