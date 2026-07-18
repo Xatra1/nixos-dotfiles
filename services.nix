@@ -80,4 +80,26 @@
     80
     443
   ];
+
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
+  virtualisation.oci-containers = {
+    backend = "docker";
+
+    containers."iSponsorBlockTV" = {
+      image = "ghcr.io/dmunozv04/isponsorblocktv";
+      #log-driver = "journald";
+
+      volumes = [
+        "/home/solarfire/Documents/Docker/iSponsorBlockTV:/app/data"
+      ];
+
+      extraOptions = [
+        "--network=host"
+      ];
+    };
+  };
 }
