@@ -52,6 +52,7 @@
         General = {
           "Startup Session" = "last";
           "Restore Window Configuration" = true;
+          "Show output view for message type" = 0;
         };
 
         Konsole.KonsoleEscKeyBehavior = false;
