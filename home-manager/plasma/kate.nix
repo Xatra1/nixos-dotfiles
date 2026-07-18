@@ -54,6 +54,7 @@
           "Restore Window Configuration" = true;
         };
 
+        Konsole.KonsoleEscKeyBehavior = false;
         project.restoreProjectsForSessions = true;
         lspclient.ServerConfiguration = "file:///home/solarfire/.config/kate/lspclient/totally-not-settings.json"; # see above comment
       };
