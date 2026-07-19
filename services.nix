@@ -35,6 +35,7 @@
 
     caddy = {
       enable = true;
+
       virtualHosts."jellyfin.solarfire164.xyz" = {
         extraConfig = ''
           reverse_proxy :8096
@@ -58,6 +59,7 @@
     after = [ "network.target" ];
     wantedBy = [ "default.target" ];
     description = "Start Jellyfin-RPC";
+
     serviceConfig = {
       Type = "simple";
       ExecStart = "${pkgs.jellyfin-rpc}/bin/jellyfin-rpc";

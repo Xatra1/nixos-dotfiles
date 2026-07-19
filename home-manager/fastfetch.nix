@@ -1,6 +1,7 @@
 {
   home-manager.users.solarfire.programs.fastfetch = {
     enable = true;
+
     settings = {
       "modules" = [
         "title"

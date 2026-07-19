@@ -1,6 +1,7 @@
 {
   home-manager.users.solarfire.programs.mpv = {
     enable = true;
+
     config = {
       demuxer-max-bytes = "700000KiB";
       fs = "yes";

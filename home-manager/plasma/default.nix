@@ -9,6 +9,7 @@
 
   home-manager.users.solarfire = {
     imports = [ <plasma-manager/modules> ];
+
     programs.plasma = {
       enable = true;
       overrideConfig = true;

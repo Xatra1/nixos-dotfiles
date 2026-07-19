@@ -91,6 +91,7 @@
 
   security = {
     polkit.enablePkexecWrapper = true; # needed for gparted to run
+
     wrappers.btop = {
       source = "/run/current-system/sw/bin/btop";
       capabilities = "cap_perfmon+ep";

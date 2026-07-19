@@ -1,6 +1,7 @@
 {
   home-manager.users.solarfire.programs.git = {
     enable = true;
+
     settings = {
       user = {
         email = "xatra169@gmail.com";

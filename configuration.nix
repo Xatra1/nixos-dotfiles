@@ -14,6 +14,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -49,11 +50,13 @@
     "solarfire" = {
       isNormalUser = true;
       description = "skrimmy mcbimmy";
+
       extraGroups = [
         "networkmanager"
         "wheel"
         "media"
       ];
+
       shell = pkgs.zsh;
     };
   };
