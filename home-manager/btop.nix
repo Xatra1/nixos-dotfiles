@@ -16,6 +16,7 @@
       custom_cpu_name = "Intel Core i7-11700";
 
       swap_disk = false;
+      disks_filter = "exclude=/nix";
 
       nvmi_measure_pcie_speeds = true;
       custom_gpu_name0 = "NVIDIA GeForce RTX 3050";
