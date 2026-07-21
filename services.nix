@@ -36,15 +36,19 @@
     caddy = {
       enable = true;
 
-      virtualHosts."jellyfin.solarfire164.xyz" = {
-        extraConfig = ''
-          reverse_proxy :8096
-        '';
-        serverAliases = [ "solarfire164.xyz" ];
-      };
+      virtualHosts."solarfire164.xyz".extraConfig = ''
+        file_server browse
+        root /var/www/data
+      '';
+
+      virtualHosts."jellyfin.solarfire164.xyz".extraConfig = ''
+        reverse_proxy :8096
+      '';
+
       virtualHosts."sonarr.solarfire164.xyz".extraConfig = ''
         reverse_proxy :8989
       '';
+
       virtualHosts."radarr.solarfire164.xyz".extraConfig = ''
         reverse_proxy :7878
       '';
