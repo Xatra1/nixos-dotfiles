@@ -9,11 +9,7 @@
     openssh.enable = true;
     sonarr.enable = true;
     radarr.enable = true;
-
-    udev.extraRules = ''
-      ACTION=="add|change", KERNEL=="sd[a-z]*", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
-      ACTION=="add|change", KERNEL=="nvme[0-9]*", ENV{DEVTYPE}=="disk", ATTR{queue/scheduler}="bfq"
-    '';
+    xserver.videoDrivers = [ "nvidia" ];
 
     pipewire = {
       enable = true;

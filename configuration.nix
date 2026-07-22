@@ -2,9 +2,7 @@
 {
   imports = [
     ./home-manager
-    ./graphics.nix
-    ./hardware-configuration.nix
-    ./mountpoints.nix
+    ./hardware.nix
     ./packages.nix
     ./services.nix
   ];
@@ -21,11 +19,6 @@
   networking = {
     hostName = "lemon";
     networkmanager.enable = true;
-  };
-
-  hardware = {
-    cpu.intel.updateMicrocode = true;
-    bluetooth.enable = true;
   };
 
   time.timeZone = "America/New_York";
