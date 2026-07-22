@@ -1,10 +1,5 @@
 { pkgs, ... }:
 {
-  nixpkgs = {
-    config.cudaSupport = true;
-    hostPlatform = "x86_64-linux";
-  };
-
   boot = {
     initrd.availableKernelModules = [
       "xhci_pci"
