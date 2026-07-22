@@ -7,6 +7,7 @@
     nvidia = {
       branch = "bleeding_edge";
       open = true;
+      powerManagement.enable = true;
     };
 
     graphics = {
