@@ -41,6 +41,7 @@
     neovim
     nil
     nixfmt
+    nssTools
     nodejs-slim
     nvd
     obs-studio
