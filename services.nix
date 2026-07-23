@@ -1,8 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   services = {
     displayManager.plasma-login-manager.enable = true;
@@ -36,11 +32,6 @@
     caddy = {
       enable = true;
 
-      virtualHosts."localhost:8080".extraConfig = ''
-        root /home/solarfire/Documents/Projects/coin-clicker-rewrite
-        file_server
-      '';
-
       virtualHosts."solarfire164.xyz".extraConfig = ''
         file_server browse
         root /var/www/data
@@ -59,7 +50,6 @@
       '';
     };
   };
-  systemd.services.caddy.serviceConfig.ProtectHome = lib.mkForce false; # I HATE SANDBOXES
 
   # Nix does not let you use integers on the left side of a binding without
   # turning them into strings, so declaratively configuring a GPU fan curve
@@ -122,7 +112,6 @@
   networking.firewall.allowedTCPPorts = [
     80
     443
-    8080
   ];
 
   virtualisation.docker.rootless = {

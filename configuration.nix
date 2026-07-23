@@ -50,7 +50,6 @@
         "media"
       ];
 
-      homeMode = "0755"; # required to allow caddy to access /home
       shell = pkgs.zsh;
     };
   };
