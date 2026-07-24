@@ -59,7 +59,7 @@
     steam
     tailscale
     typescript-language-server
-    ventoy
+    (callPackage ./nix-derivations/ventoy/package.nix { })
     vscode-langservers-extracted
     wget
     wine
@@ -83,10 +83,6 @@
     drkonqi
     elisa
     kwin-x11
-  ];
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.12"
   ];
 
   security = {
