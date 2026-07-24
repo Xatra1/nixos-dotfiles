@@ -1,4 +1,7 @@
+{ config, ... }:
 {
+  imports = [ ../../reused-strings.nix ];
+
   home-manager.users.solarfire.programs.plasma.panels = [
     {
       location = "top";
@@ -92,13 +95,13 @@
               {
                 name = "cpu/all/averageTemperature";
                 color = "0,170,255";
-                label = "Intel Core i7-11700";
+                label = config.hardwareInfo.cpuName;
               }
 
               {
                 name = "gpu/gpu0/temperature";
                 color = "0,255,0";
-                label = "NVIDIA GeForce RTX 3050";
+                label = builtins.elemAt config.hardwareInfo.gpuNames 1;
               }
             ];
           };

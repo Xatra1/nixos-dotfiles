@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
+  imports = [ ../reused-strings.nix ];
+
   home-manager.users.solarfire.programs.btop = {
     enable = true;
 
@@ -19,8 +21,8 @@
       disks_filter = "exclude=/nix";
 
       nvmi_measure_pcie_speeds = true;
-      custom_gpu_name0 = "NVIDIA GeForce RTX 3050";
-      custom_gpu_name1 = "Intel Graphics UHD 750";
+      custom_gpu_name0 = builtins.elemAt config.hardwareInfo.gpuNames 1;
+      custom_gpu_name1 = builtins.elemAt config.hardwareInfo.gpuNames 0;
     };
   };
 }

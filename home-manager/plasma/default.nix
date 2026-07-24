@@ -1,5 +1,7 @@
+{ config, ... }:
 {
   imports = [
+    ../../reused-strings.nix
     ./extra-config-files.nix
     ./kate.nix
     ./panels.nix
@@ -17,7 +19,7 @@
 
       kscreenlocker = {
         autoLock = false;
-        appearance.wallpaper = "/home/solarfire/Pictures/Wallpapers/97.jpg";
+        appearance.wallpaper = config.wallpaper;
       };
 
       shortcuts = {

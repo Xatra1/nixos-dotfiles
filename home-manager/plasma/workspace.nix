@@ -1,10 +1,13 @@
+{ config, ... }:
 {
+  imports = [ ../../reused-strings.nix ];
+
   home-manager.users.solarfire.programs.plasma.workspace = {
     enableMiddleClickPaste = false;
     theme = "Amethyst";
     colorScheme = "TokyoNight";
     iconTheme = "Tela-circle-dark";
-    wallpaper = "/home/solarfire/Pictures/Wallpapers/97.jpg";
+    wallpaper = config.wallpaper;
     cursor.theme = "Oxygen 08 Indigo";
 
     windowDecorations = {
