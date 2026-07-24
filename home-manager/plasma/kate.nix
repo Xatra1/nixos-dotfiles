@@ -55,7 +55,7 @@
           "Show output view for message type" = 0;
         };
 
-        Konsole.KonsoleEscKeyBehavior = false;
+        Konsole.KonsoleEscKeyBehaviour = false;
         project.restoreProjectsForSessions = true;
         lspclient.ServerConfiguration = "file:///home/solarfire/.config/kate/lspclient/totally-not-settings.json"; # see above comment
       };
