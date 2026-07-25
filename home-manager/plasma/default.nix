@@ -5,7 +5,6 @@
     ./extra-config-files.nix
     ./kate.nix
     ./panels.nix
-    ./startup.nix
     ./workspace.nix
   ];
 

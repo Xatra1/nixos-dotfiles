@@ -3,7 +3,6 @@
     <home-manager/nixos>
     ./plasma
     ./btop.nix
-    ./easyeffects.nix
     ./fastfetch.nix
     ./git.nix
     ./hyfetch.nix

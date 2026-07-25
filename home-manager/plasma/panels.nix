@@ -9,55 +9,12 @@
       lengthMode = "fill";
       hiding = "dodgewindows";
       floating = true;
-      screen = 0;
 
       widgets = [
         {
           name = "org.kde.plasma.pager";
         }
 
-        {
-          name = "org.kde.plasma.panelspacer";
-        }
-
-        {
-          digitalClock = {
-            date = {
-              enable = true;
-              format = "isoDate";
-            };
-
-            time.format = "12h";
-          };
-        }
-
-        {
-          name = "org.kde.plasma.panelspacer";
-        }
-
-        {
-          systemTray = {
-            items.hidden = [
-              "org.kde.plasma.battery"
-              "org.kde.plasma.clipboard"
-              "org.kde.plasma.brightness"
-              "org.kde.plasma.mediacontroller"
-              "org.kde.plasma.devicenotifier"
-            ];
-          };
-        }
-      ];
-    }
-
-    {
-      location = "top";
-      height = 56;
-      lengthMode = "fill";
-      hiding = "dodgewindows";
-      floating = true;
-      screen = 1;
-
-      widgets = [
         {
           systemMonitor = {
             displayStyle = "org.kde.ksysguard.horizontalbars";
@@ -98,12 +55,6 @@
                 color = "0,170,255";
                 label = config.hardwareInfo.cpuName;
               }
-
-              {
-                name = "gpu/gpu0/temperature";
-                color = "0,255,0";
-                label = builtins.elemAt config.hardwareInfo.gpuNames 1;
-              }
             ];
           };
         }
@@ -128,13 +79,14 @@
         }
 
         {
-          systemTray.items.hidden = [
-            "org.kde.plasma.battery"
-            "org.kde.plasma.clipboard"
-            "org.kde.plasma.brightness"
-            "org.kde.plasma.mediacontroller"
-            "org.kde.plasma.devicenotifier"
-          ];
+          systemTray = {
+            items.hidden = [
+              "org.kde.plasma.battery"
+              "org.kde.plasma.clipboard"
+              "org.kde.plasma.mediacontroller"
+              "org.kde.plasma.devicenotifier"
+            ];
+          };
         }
       ];
     }
@@ -145,7 +97,6 @@
       lengthMode = "fit";
       hiding = "dodgewindows";
       floating = true;
-      screen = "all";
 
       widgets = [
         {
@@ -168,8 +119,6 @@
               "preferred://filemanager"
               "applications:kitty.desktop"
               "applications:discord.desktop"
-              "applications:spotify.desktop"
-              "applications:steam.desktop"
               "applications:systemsettings.desktop"
             ];
           };

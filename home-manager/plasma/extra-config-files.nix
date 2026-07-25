@@ -7,8 +7,6 @@
       PreviewSize = 32;
     };
 
-    kcminputrc."Libinput/1133/49291/Logitech G502 HERO Gaming Mouse".ScrollMethod = 4;
-
     kdeglobals = {
       KDE.DndBehavior = "MoveIfSameDevice";
 
@@ -34,12 +32,11 @@
       Effect-overview.BorderActivate = 9;
 
       Plugins = {
-        blurEnabled = true;
+        blurEnabled = false;
         frozenappEnabled = false;
         screenedgeEnabled = false;
         shakecursorEnabled = false;
         trackmouseEnabled = true;
-        translucencyEnabled = true;
       };
 
       TabBox = {
@@ -49,7 +46,6 @@
       };
 
       Wayland.EnablePrimarySelection = false;
-      Xwayland.XwaylandEisNoPromptApps = "xclicker";
     };
   };
 }

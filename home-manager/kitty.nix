@@ -6,7 +6,7 @@
     autoThemeFiles.noPreference = "Argonaut";
 
     font.name = "Miracode Nerdfont";
-    font.size = 10;
+    font.size = 9;
 
     shellIntegration.mode = "no-title no-cursor";
 
@@ -14,7 +14,6 @@
       font_features = "MiracodeNF -liga";
 
       background_opacity = 0.7;
-      background_blur = 1;
 
       scrollback_lines = 5000;
       wheel_scroll_multiplier = 1;

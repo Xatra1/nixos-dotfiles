@@ -15,14 +15,12 @@
       proc_cpu_graphs = false;
       proc_filter_kernel = true;
 
-      custom_cpu_name = "Intel Core i7-11700";
+      custom_cpu_name = config.hardwareInfo.cpuName;
 
       swap_disk = false;
-      disks_filter = "exclude=/nix";
+      disks_filter = "exclude=/nix /home";
 
-      nvmi_measure_pcie_speeds = true;
-      custom_gpu_name0 = builtins.elemAt config.hardwareInfo.gpuNames 1;
-      custom_gpu_name1 = builtins.elemAt config.hardwareInfo.gpuNames 0;
+      custom_gpu_name0 = builtins.elemAt config.hardwareInfo.gpuNames 0;
     };
   };
 }

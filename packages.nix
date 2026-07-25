@@ -6,57 +6,31 @@
     android-tools
     bat
     btop
-    caddy
-    chromium
     discord
-    docker
-    easyeffects
     fastfetch
-    ffmpeg
     flatpak
     gcc
-    gimp
     git
     gparted
-    headsetcontrol
     hyfetch
-    (callPackage ./nix-derivations/ioquake3.nix { })
-    (callPackage ./nix-derivations/ironwail.nix { })
-    jellyfin
-    jellyfin-rpc
-    jellyfin-web
     jq
-    (callPackage ./nix-derivations/kate-discord-rpc.nix { })
     kdePackages.filelight
     kdePackages.kate
     kdePackages.kcolorchooser
     kdePackages.markdownpart
     kdePackages.plasma-login-manager
     kitty
-    lact
     marksman
-    mediainfo
-    mkvtoolnix
     mpv
     neovim
     nil
     nixfmt
     nodejs-slim
     nvd
-    obs-studio
     p7zip
     prettier
-    protontricks
-    protonup-qt
-    qbittorrent
-    radarr
     rust-analyzer
     rustup
-    satisfactorymodmanager
-    sof-firmware
-    sonarr
-    spotify
-    steam
     tailscale
     typescript-language-server
     (callPackage ./nix-derivations/ventoy/package.nix { })
@@ -64,8 +38,6 @@
     wget
     wine
     wl-clipboard
-    x264
-    xclicker
     zsh
   ];
 
@@ -104,7 +76,6 @@
     nano.enable = false;
     dconf.enable = true;
     zsh.enable = true;
-    steam.enable = true;
 
     neovim = {
       enable = true;

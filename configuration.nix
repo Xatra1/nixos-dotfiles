@@ -17,7 +17,7 @@
   };
 
   networking = {
-    hostName = "lemon";
+    hostName = "clementine";
     networkmanager.enable = true;
   };
 
@@ -47,7 +47,6 @@
       extraGroups = [
         "networkmanager"
         "wheel"
-        "media"
       ];
 
       shell = pkgs.zsh;
@@ -59,8 +58,6 @@
     XDG_CONFIG_HOME = "/home/solarfire/.config";
     XDG_STATE_HOME = "/home/solarfire/.local/state";
     XDG_DATA_HOME = "/home/solarfire/.local/share";
-
-    CUDA_CACHE_PATH = "$XDG_CACHE_HOME/nv";
 
     GTK2_RC_FILES = "$XDG_CONFIG_HOME/gtk-2.0/gtkrc";
     WGETRC = "$XDG_CONFIG_HOME/wgetrc";
@@ -80,7 +77,7 @@
       experimental-features = [ "nix-command" ];
       use-xdg-base-directories = true;
       max-jobs = 1;
-      cores = 16;
+      cores = 4;
     };
 
     gc = {
@@ -89,10 +86,7 @@
     };
   };
 
-  nixpkgs = {
-    config.cudaSupport = true;
-    hostPlatform = "x86_64-linux";
-  };
+  nixpkgs.hostPlatform = "x86_64-linux";
 
   # boring nerd shit. dont change
   system.stateVersion = "26.05"; # Did you read the comment?

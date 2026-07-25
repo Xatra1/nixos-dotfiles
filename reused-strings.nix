@@ -10,7 +10,7 @@
     hardwareInfo = {
       cpuName = lib.mkOption {
         type = lib.types.str;
-        default = "Intel Core i7-11700";
+        default = "Intel Core i3-6100U";
         description = "Custom CPU name.";
       };
 
@@ -19,7 +19,6 @@
 
         default = [
           "Intel Graphics UHD 750"
-          "NVIDIA GeForce RTX 3050"
         ];
 
         description = "List of custom names for each GPU.";
