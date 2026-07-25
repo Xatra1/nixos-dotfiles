@@ -114,6 +114,10 @@
     443
   ];
 
+  networking.firewall.allowedUDPPorts = [
+    26000
+  ];
+
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
