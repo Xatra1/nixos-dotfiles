@@ -7,7 +7,6 @@
     bat
     btop
     caddy
-    chromium
     discord
     docker
     easyeffects
