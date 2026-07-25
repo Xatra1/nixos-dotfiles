@@ -12,7 +12,7 @@
       [Desktop Entry]
       Type=Application
       Name=Discord
-      Exec=${pkgs.discord}/bin/discord --start-minimized
+      Exec=${pkgs.discord}/bin/discord --enable-smooth-scrolling --enable-blink-features=MiddleClickAutoscroll --enable-gpu-rasterization --enable-features=VaapiVideoDecodeLinuxGL --start-minimized
     '';
 
     "autostart/steam.desktop".text = ''
