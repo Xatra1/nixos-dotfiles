@@ -18,7 +18,7 @@
         type = with lib.types; listOf str;
 
         default = [
-          "Intel Graphics UHD 750"
+          "Intel Graphics HD 520"
         ];
 
         description = "List of custom names for each GPU.";
