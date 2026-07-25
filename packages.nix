@@ -1,4 +1,12 @@
 { pkgs, ... }:
+let
+  electronArgs = [
+    "--enable-smooth-scrolling"
+    "--enable-blink-features=MiddleClickAutoscroll"
+    "--enable-gpu-rasterization"
+    "--enable-features=VaapiVideoDecodeLinuxGL"
+  ];
+in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -7,7 +15,11 @@
     bat
     btop
     caddy
-    discord
+
+    (discord.override {
+      commandLineArgs = electronArgs;
+    })
+
     docker
     easyeffects
     fastfetch
@@ -54,7 +66,17 @@
     satisfactorymodmanager
     sof-firmware
     sonarr
-    spotify
+
+    (pkgs.symlinkJoin {
+      name = "spotify";
+      paths = [ spotify ];
+      buildInputs = [ makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/spotify \
+          --add-flags "${lib.concatStringsSep " " electronArgs}"
+      '';
+    })
+
     steam
     tailscale
     typescript-language-server
