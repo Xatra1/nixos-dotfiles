@@ -1,4 +1,12 @@
 { pkgs, ... }:
+let
+  electronArgs = [
+    "--ozone-platform=wayland"
+    "--enable-smooth-scrolling"
+    "--enable-gpu-rasterization"
+    "--enable-features=VaapiVideoDecodeLinuxGL"
+  ];
+in
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -6,7 +14,11 @@
     android-tools
     bat
     btop
-    discord
+
+    (discord.override {
+      commandLineArgs = electronArgs;
+    })
+
     fastfetch
     flatpak
     gcc
