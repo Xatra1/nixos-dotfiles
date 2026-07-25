@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   boot = {
     initrd.availableKernelModules = [
@@ -46,6 +47,7 @@
   hardware = {
     enableRedistributableFirmware = true;
     cpu.intel.updateMicrocode = true;
+    graphics.extraPackages = with pkgs; [ intel-media-driver ];
     bluetooth.enable = true;
   };
 }
