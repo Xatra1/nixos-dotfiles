@@ -15,7 +15,7 @@
       proc_cpu_graphs = false;
       proc_filter_kernel = true;
 
-      custom_cpu_name = "Intel Core i7-11700";
+      custom_cpu_name = config.hardwareInfo.cpuName;
 
       swap_disk = false;
       disks_filter = "exclude=/nix";
