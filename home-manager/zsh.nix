@@ -42,6 +42,7 @@ in
       history = {
         append = true;
         ignoreAllDups = true;
+        ignoreSpace = true;
         path = "/home/solarfire/.config/zsh/zsh-history";
         share = true;
         size = 9223372036854775807; # LONG_MAX
