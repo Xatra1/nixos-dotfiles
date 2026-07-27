@@ -6,6 +6,7 @@
     ./kate.nix
     ./panels.nix
     ./startup.nix
+    ./theme-fetch.nix
     ./workspace.nix
   ];
 
