@@ -71,6 +71,7 @@ in
       name = "spotify";
       paths = [ spotify ];
       buildInputs = [ makeWrapper ];
+
       postBuild = ''
         wrapProgram $out/bin/spotify \
           --add-flags "${lib.concatStringsSep " " electronArgs}"
