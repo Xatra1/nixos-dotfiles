@@ -2,8 +2,8 @@
 {
   home-manager.users.solarfire.xdg.dataFile = with pkgs; {
     "color-schemes/TokyoNight.colors".source = fetchurl {
-      url = "https://github.com/Jayy-Dev/Plasma-Tokyo-Night/blob/plasma-6/colorscheme/TokyoNight.colors";
-      hash = "sha256-8pXZqz3rA6HtK6ez7QudT3XkjGA4HjIxDIGd60MGLis=";
+      url = "https://raw.githubusercontent.com/Jayy-Dev/Plasma-Tokyo-Night/refs/heads/plasma-6/colorscheme/TokyoNight.colors";
+      hash = "sha256-Qm6TY+5MCDIvvSkBn0iiLFL+ni4pMcokAJOtc2URelw=";
     };
 
     "plasma/desktoptheme/Amethyst/".source = fetchFromGitHub {
