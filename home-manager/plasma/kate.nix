@@ -55,7 +55,11 @@
           "Show output view for message type" = 0;
         };
 
-        Konsole.KonsoleEscKeyBehaviour = false;
+        Konsole = {
+          AutoSyncronizeMode = 1; # its spelled wrong in katerc lol
+          KonsoleEscKeyBehaviour = false;
+        };
+
         project.restoreProjectsForSessions = true;
         lspclient.ServerConfiguration = "file:///home/solarfire/.config/kate/lspclient/totally-not-settings.json"; # see above comment
       };
