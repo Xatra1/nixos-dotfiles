@@ -10,12 +10,12 @@
       owner = "ddh4r4m";
       repo = "Amethyst";
       rev = "a6af9b7727e0337b98a5705bc60b9a6b841761c7";
-      hash = "sha256-Qzt6GIXZTh8NGEdUcL4wTnQmtmPiHn1/jJxYerLmPWc=";
+      hash = "sha256-hzsA2ffhX+7DO/AiChbkgiccXTZS/xk1VQ79mKyG/yo=";
       leaveDotGit = true; # forces it to clone the repo instead of pulling a zip archive
 
       postFetch = ''
         cd $out
-        mv plasma/desktoptheme/Amethyst .
+        mv plasma/desktoptheme/Amethyst/* .
         rm -r color-schemes gtk konsole kvantum plasma plasmoids .git
         rm LICENSE README.md
       '';
