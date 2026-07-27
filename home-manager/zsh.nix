@@ -44,8 +44,8 @@ in
         ignoreAllDups = true;
         path = "/home/solarfire/.config/zsh/zsh-history";
         share = true;
-        save = 10000;
-        size = 10000;
+        size = 9223372036854775807; # LONG_MAX
+        save = 9223372036854775807;
       };
 
       syntaxHighlighting = {
