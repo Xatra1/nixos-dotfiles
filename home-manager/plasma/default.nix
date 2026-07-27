@@ -5,6 +5,7 @@
     ./extra-config-files.nix
     ./kate.nix
     ./panels.nix
+    ./theme-fetch.nix
     ./workspace.nix
   ];
 
