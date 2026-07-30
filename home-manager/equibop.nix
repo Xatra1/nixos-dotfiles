@@ -7,11 +7,8 @@ in
       enable = true;
 
       settings = {
-        discordBranch = "stable";
         minimizeToTray = true;
         arRPC = true;
-        splashColor = "rgb(239, 246, 247)";
-        splashBackground = "rgb(28, 34, 42)";
         hardwareAcceleration = true;
         staticTitle = true;
         customTitleBar = true;
