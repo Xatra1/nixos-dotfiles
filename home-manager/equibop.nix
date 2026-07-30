@@ -58,6 +58,14 @@ in
           };
 
           NoF1.enabled = true;
+
+          NewGuildSettings = {
+            enabled = true;
+            everyone = false;
+            role = false;
+            voiceChannels = true;
+          };
+
           PlatformIndicators.enabled = true;
           RelationshipNotifier.enabled = true;
 
