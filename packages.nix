@@ -15,13 +15,9 @@ in
     bat
     btop
     caddy
-
-    (discord.override {
-      commandLineArgs = electronArgs;
-    })
-
     docker
     easyeffects
+    equibop
     fastfetch
     ffmpeg
     flatpak

@@ -8,11 +8,11 @@
       Exec=${pkgs.easyeffects}/bin/easyeffects --hide-window --service-mode
     '';
 
-    "autostart/discord.desktop".text = ''
+    "autostart/equibop.desktop".text = ''
       [Desktop Entry]
       Type=Application
-      Name=Discord
-      Exec=${pkgs.discord}/bin/discord --enable-smooth-scrolling --enable-blink-features=MiddleClickAutoscroll --enable-gpu-rasterization --enable-features=VaapiVideoDecodeLinuxGL --start-minimized
+      Name=Equibop
+      Exec=${pkgs.equibop}/bin/equibop --start-minimized
     '';
 
     "autostart/steam.desktop".text = ''
