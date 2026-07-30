@@ -51,7 +51,7 @@
 
           MessageLogger = {
             enabled = true;
-            #ignoreBots = true;
+            ignoreBots = true;
             ignoreSelf = true;
           };
 
