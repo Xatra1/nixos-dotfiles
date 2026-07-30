@@ -4,6 +4,7 @@
     ./home-manager
     ./hardware.nix
     ./packages.nix
+    ./plasma-overlay.nix
     ./services.nix
   ];
 
