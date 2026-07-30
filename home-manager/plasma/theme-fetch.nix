@@ -69,6 +69,9 @@
           rm Tela-circle-dark/symbolic/apps/xsi-addon-symbolic.svg
           rm Tela-circle-dark/scalable/apps/org.xfce.appfinder.svg
 
+          # https://github.com/vinceliuice/Tela-circle-icon-theme/issues/297
+          mv Tela-circle-dark/scalable/apps/org.vinegarhq.sober.svg Tela-circle-dark/scalable/apps/org.vinegarhq.Sober.svg
+
           mv Tela-circle-dark/* .
 
           # remove unused themes and the empty folder
