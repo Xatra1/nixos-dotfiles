@@ -1,6 +1,7 @@
 {
   home-manager.users.solarfire.programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
 
     settings = {
       "lemon" = {
