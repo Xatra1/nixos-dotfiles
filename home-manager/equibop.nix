@@ -1,3 +1,6 @@
+let
+  clearVisionThemeLink = "https://raw.githubusercontent.com/ClearVision/ClearVision-v7/master/ClearVision-v7-BetterDiscord.theme.css";
+in
 {
   home-manager.users.solarfire = {
     programs.equibop = {
@@ -18,6 +21,8 @@
       equicord.settings = {
         autoUpdate = true;
         autoUpdateNotification = false;
+        themeLinks = [ clearVisionThemeLink ];
+        enabledThemeLinks = [ clearVisionThemeLink ];
 
         plugins = {
           # vencord
