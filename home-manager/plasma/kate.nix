@@ -3,12 +3,12 @@
     xdg.configFile = {
       "kate/formatting/settings.json".text = ''
         {
-            "nixfmt": {
-                "command": [
-                    "nixfmt",
-                    "-"
-                ]
-            }
+          "nixfmt": {
+            "command": [
+              "nixfmt",
+              "-"
+            ]
+          }
         }
       '';
 
@@ -17,32 +17,37 @@
       # have no idea why the hell this is the case.
       "kate/lspclient/totally-not-settings.json".text = ''
         {
-            "servers": {
-                "css": {
-                    "command": [
-                        "vscode-css-language-server",
-                        "--stdio"
-                    ],
-                    "url": "https://github.com/Microsoft/vscode/tree/main/extensions/css-language-features/server",
-                    "highlightingModeRegex": "^CSS$"
-                },
-                "html": {
-                    "command": [
-                        "vscode-html-language-server",
-                        "--stdio"
-                    ],
-                    "url": "https://github.com/Microsoft/vscode/tree/main/extensions/html-language-features/server",
-                    "highlightingModeRegex": "^HTML$"
-                },
-                "json": {
-                    "command": [
-                        "vscode-json-language-server",
-                        "--stdio"
-                    ],
-                    "url": "https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server",
-                    "highlightingModeRegex": "^JSON$"
-                }
+          "servers": {
+            "css": {
+              "command": [
+                "vscode-css-language-server",
+                "--stdio"
+              ],
+
+              "url": "https://github.com/Microsoft/vscode/tree/main/extensions/css-language-features/server",
+              "highlightingModeRegex": "^CSS$"
+            },
+
+            "html": {
+              "command": [
+                "vscode-html-language-server",
+                "--stdio"
+              ],
+
+              "url": "https://github.com/Microsoft/vscode/tree/main/extensions/html-language-features/server",
+              "highlightingModeRegex": "^HTML$"
+            },
+
+            "json": {
+              "command": [
+                "vscode-json-language-server",
+                "--stdio"
+              ],
+
+              "url": "https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server",
+              "highlightingModeRegex": "^JSON$"
             }
+          }
         }
       '';
     };
