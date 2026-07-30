@@ -10,6 +10,7 @@
     ./hyfetch.nix
     ./kitty.nix
     ./mpv.nix
+    ./ssh.nix
     ./zsh.nix
   ];
 
