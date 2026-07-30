@@ -23,7 +23,7 @@ in
     "easyeffects/db/equalizerrc".text = ''
       [soe][Equalizer#0]
       inputGain=-10
-      numBands=4
+      numBands=1
 
       [soe][Equalizer#0#left]
       ${equalizerSettings}
