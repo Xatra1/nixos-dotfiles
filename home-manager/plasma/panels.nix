@@ -2,11 +2,6 @@
 {
   imports = [ ../../reused-strings.nix ];
 
-  # plasma Really likes to randomly corrupt my panel config
-  systemd.tmpfiles.rules = [
-    "Z /home/solarfire/.config/plasma-org.kde.plasma.desktop-appletsrc 0400 solarfire users - -"
-  ];
-
   home-manager.users.solarfire.programs.plasma.panels = [
     {
       location = "top";
