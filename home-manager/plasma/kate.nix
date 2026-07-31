@@ -81,7 +81,7 @@
             pointSize = 9;
           };
 
-          theme.name = "ayu Mirage";
+          theme.name = "Tokyo Night";
           brackets.automaticallyAddClosing = true;
         };
       };
