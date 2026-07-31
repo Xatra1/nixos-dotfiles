@@ -13,6 +13,52 @@
 - RAM: 8GB DDR3L-1600
 - Storage: 128GB SSD
 
+## Adding a host
+**1. Generate unique ssh and gpg key pairs for the new host:**
+- SSH:
+```sh
+ssh-keygen
+wl-copy -t text/plain < ~/.ssh/id_ed25519.pub
+# create a new ssh key entry on codeberg and paste the result into the Content field
+
+# click Verify on the newly added key
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_ed25519
+# codeberg will give you commands to run that generate a signature. copy the second one, run it, and paste the resulting output into the
+# "Armored SSH signature" field
+```
+- GPG:
+```sh
+gpg --full-generate-key # key should be a 4096 rsa key
+gpg --list-secret-keys --keyid-format=long
+# copy the key id
+gpg --armor --export KEYID
+# create a new gpg key entry on codeberg and paste the result into the Content field
+# you will need to add the key to github as well
+
+# click Verify on the newly added key
+# codeberg will give you a command to run that generates a signature. run it, and paste the resulting output into the "Armored GPG signature" 
+# field
+```
+
+**2. Create an orphan branch based off the latest master commit:**
+```sh
+git checkout --orphan hostname
+```
+**3. Make any necessary changes.**
+**4. Commit them:**
+```sh
+git commit -m "init hostname branch" -a
+```
+**5. Push the new branch to the remote:**
+```sh
+git push
+```
+**Note**: Setting up a remote url is not necessary as long as the config in `home-manager/git.nix` is used. Otherwise:
+```sh
+git push --set-upstream origin branch-name
+```
+
 # Structure
 ```
 nixos-dotfiles/                     # root
