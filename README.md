@@ -41,7 +41,7 @@ nixos-dotfiles/                     # root
 |-- hardware.nix                    # mountpoint, graphics drivers, and udev rules
 |-- packages.nix                    # list of installed packages + some settings to get them to work properly
 |-- plasma-overlay.nix              # overlay to fix plasma's performance regression on NixOS
-|-- reused-strings.nix              # any generic string that gets used more than once throughout my config is probably defined here.
+|-- reused-strings.nix              # any generic string that gets used more than once throughout my config is probably defined here
 |-- services.nix                    # systemd services and their related configs
 ```
 
