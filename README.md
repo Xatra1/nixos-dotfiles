@@ -1,17 +1,8 @@
 # Hosts
-`lemon` - Main desktop. Also used as a "server" for file hosting and Jellyfin.  
-
-- CPU: Intel Core i7-11700
-- GPUs: Integrated UHD 750 + NVIDIA GeForce RTX 3050
-- RAM: 32GB DDR4-2666
-- Storage: 1TB NVME + 4TB HDD
-  
-`clementine` - Terrible laptop I got from school in my junior year. It's config is documented on the [clementine branch.](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine)  
-
-- CPU: Intel Core i3-6100U
-- GPU: Integrated HD 520
-- RAM: 8GB DDR3L-1600
-- Storage: 128GB SSD
+| Name         | Description                                                          | CPU                 | GPU                                          | RAM            | Storage            |
+|--------------|----------------------------------------------------------------------|---------------------|----------------------------------------------|----------------|--------------------|
+| `lemon`      | Main desktop. Also used as a "server" for file hosting and Jellyfin. | Intel Core i7-11700 | Integrated UHD 750 + NVIDIA GeForce RTX 3050 | 32GB DDR4-2666 | 1TB NVMe + 4TB HDD |
+| `clementine` | Terrible laptop I got from school in my junior year.                 | Intel Core i3-6100U | Integrated HD 520                            | 8GB DDR3L-1600 | 128GB SSD          |
 
 ## Adding a host
 **1. Generate unique ssh and gpg key pairs for the new host:**
@@ -45,7 +36,7 @@ gpg --armor --export KEYID
 ```sh
 git checkout --orphan hostname
 ```
-**3. Make any necessary changes.**
+**3. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**
 **4. Commit them:**
 ```sh
 git commit -m "init hostname branch" -a
