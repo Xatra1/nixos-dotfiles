@@ -25,17 +25,17 @@ nixos-dotfiles/                     # root
 |   |   |-- startup.nix                 # .desktop files to run when logging in
 |   |   |-- theme-fetch.nix             # declaratively sources the plasma themes i use
 |   |   |-- workspace.nix               # disables middle click paste (ew) + theme settings
-|   |---- btop.nix                    # btop config
-|   |---- default.nix                 # enables home-manager + some boilerplate stuff
-|   |---- easyeffects.nix             # equalizer config because my headphones have negative bass
-|   |---- equibop.nix                 # (mostly) plugin settings for equibop 
-|   |---- fastfetch.nix               # fastfetch because im unemployed
-|   |---- git.nix                     # git config
-|   |---- hyfetch.nix                 # hyfetch because im gay
-|   |---- kitty.nix                   # kitty is the best terminal Ever
-|   |---- mpv.nix                     # i barely use mpv idk why i made it's config declarative
-|   |---- ssh.nix                     # ssh identity configs
-|   |---- zsh.nix                     # very extensive zsh config that pulls in some plugins and my custom theme
+|   |-- btop.nix                      # btop config
+|   |-- default.nix                   # enables home-manager + some boilerplate stuff
+|   |-- easyeffects.nix               # equalizer config because my headphones have negative bass
+|   |-- equibop.nix                   # (mostly) plugin settings for equibop 
+|   |-- fastfetch.nix                 # fastfetch because im unemployed
+|   |-- git.nix                       # git config
+|   |-- hyfetch.nix                   # hyfetch because im gay
+|   |-- kitty.nix                     # kitty is the best terminal Ever
+|   |-- mpv.nix                       # i barely use mpv idk why i made it's config declarative
+|   |-- ssh.nix                       # ssh identity configs
+|   |-- zsh.nix                       # very extensive zsh config that pulls in some plugins and my custom theme
 |-- nix-derivations/                  # Submodule including custom-written nixpkgs
 |-- configuration.nix               # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to the other root files
 |-- hardware.nix                    # mountpoint, graphics drivers, and udev rules
