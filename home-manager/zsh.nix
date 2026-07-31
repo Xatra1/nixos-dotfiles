@@ -115,6 +115,16 @@ in
         };
       };
 
+      completionInit = ''
+        autoload -Uz compinit
+
+        for dump in $ZDOTDIR/.zcompdump(N.mh+24); do
+          compinit
+        done
+
+        compinit -C
+      '';
+
       initContent = lib.mkOrder 1500 ''
         [[ "$TERM" = "linux" ]] && clear
 
