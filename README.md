@@ -5,6 +5,7 @@
 | `clementine` | Terrible laptop I got from school in my junior year.                 | Intel Core i3-6100U | Integrated HD 520                            | 8GB DDR3L-1600 | 128GB SSD          |
 
 ## Adding a host
+**Replace any instance of "hostname" below with the hostname of the device.**  
 **1. Generate unique SSH and GPG key pairs for the new host:**
 - SSH:
 ```sh
