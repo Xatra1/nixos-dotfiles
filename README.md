@@ -36,7 +36,7 @@ nixos-dotfiles/                     # root
 |   |---- mpv.nix                     # i barely use mpv idk why i made it's config declarative
 |   |---- ssh.nix                     # ssh identity configs
 |   |---- zsh.nix                     # very extensive zsh config that pulls in some plugins and my custom theme
-|-- nix-derivations/                  # Submodule including custom-written nixpkgs. Documentation [here.](https://codeberg.org/solarfire/nix-derivations)
+|-- nix-derivations/                  # Submodule including custom-written nixpkgs
 |-- configuration.nix               # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to the other root files
 |-- hardware.nix                    # mountpoint, graphics drivers, and udev rules
 |-- packages.nix                    # list of installed packages + some settings to get them to work properly
