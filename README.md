@@ -5,7 +5,7 @@
 | `clementine` | Terrible laptop I got from school in my junior year.                 | Intel Core i3-6100U | Integrated HD 520                            | 8GB DDR3L-1600 | 128GB SSD          |
 
 ## Adding a host
-**1. Generate unique ssh and gpg key pairs for the new host:**
+**1. Generate unique SSH and GPG key pairs for the new host:**
 - SSH:
 ```sh
 ssh-keygen
@@ -70,12 +70,12 @@ nixos-dotfiles/                     # root
 |   |-- git.nix                       # git config
 |   |-- hyfetch.nix                   # hyfetch because im gay
 |   |-- kitty.nix                     # kitty is the best terminal Ever
-|   |-- mpv.nix                       # i barely use mpv idk why i made it's config declarative
+|   |-- mpv.nix                       # i barely use mpv idk why i made its config declarative
 |   |-- ssh.nix                       # ssh identity configs
 |   |-- zsh.nix                       # very extensive zsh config that pulls in some plugins and my custom theme
 |-- nix-derivations/                  # Submodule including custom-written nixpkgs
 |-- configuration.nix               # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to the other root files
-|-- hardware.nix                    # mountpoint, graphics drivers, and udev rules
+|-- hardware.nix                    # mountpoints, graphics drivers, and udev rules
 |-- packages.nix                    # list of installed packages + some settings to get them to work properly
 |-- plasma-overlay.nix              # overlay to fix plasma's performance regression on NixOS
 |-- reused-strings.nix              # any generic string that gets used more than once throughout my config is probably defined here
