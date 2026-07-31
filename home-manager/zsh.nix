@@ -18,6 +18,14 @@ let
     url = "https://github.com/ohmyzsh/ohmyzsh";
     ref = "master";
   };
+
+  burnConfig = ''
+    BURN_BACKGROUND_COLOR_ERROR="#6a5496"
+    BURN_BACKGROUND_COLOR_HOSTNAME="#b278d9"
+    BURN_BACKGROUND_COLOR_DIR="#6a5496"
+    BURN_FOREGROUND_COLOR_HOSTNAME="white"
+    BURN_FOREGROUND_COLOR_DIR="white"
+  '';
 in
 {
   home-manager.users.solarfire = {
@@ -117,11 +125,7 @@ in
 
         setopt interactivecomments
 
-        BURN_BACKGROUND_COLOR_ERROR="#6a5496"
-        BURN_BACKGROUND_COLOR_HOSTNAME="#b278d9"
-        BURN_BACKGROUND_COLOR_DIR="#6a5496"
-        BURN_FOREGROUND_COLOR_HOSTNAME="white"
-        BURN_FOREGROUND_COLOR_DIR="white"
+        ${burnConfig}
         source $THEME_PATH/burn.zsh-theme
 
         source $PLUGIN_PATH/sudo.plugin.zsh
