@@ -6,7 +6,16 @@
 
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
-**1. Generate unique SSH and GPG key pairs for the new host:**
+  
+**1. Add Nix channels:**
+```sh
+sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixos
+sudo nix-channel --add https://github.com/nix-community/plasma-manager/archive/trunk.tar.gz plasma-manager
+sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+sudo nix-channel --update
+```
+
+**2. Generate unique SSH and GPG key pairs for the new host:**
 - SSH:
 ```sh
 ssh-keygen
@@ -19,6 +28,7 @@ ssh-add ~/.ssh/id_ed25519
 # codeberg will give you commands to run that generate a signature. copy the second one, run it, and paste the resulting output into the
 # "Armored SSH signature" field
 ```
+
 - GPG:
 ```sh
 gpg --full-generate-key # key should be a 4096 rsa key
@@ -33,20 +43,43 @@ gpg --armor --export KEYID
 # field
 ```
 
-**2. Create an orphan branch based off the latest master commit:**
+**3. Spawn a shell with git:**
+```sh
+nix-shell -p git
+```
+
+**4. Clone the repository:**
+```sh
+git clone --recursive git@codeberg.org:solarfire/nixos-dotfiles
+# you can also use the following mirror if codeberg happens to be down:
+git clone --recursive git@github.com:Xatra1/nixos-dotfiles
+```
+
+**5. Create an orphan branch based off the latest master commit:**
 ```sh
 git checkout --orphan hostname
 ```
-**3. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
+
+**6. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
 *See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
-**4. Commit them:**
+
+**7. Test the changes:**
+```sh
+sudo nixos-rebuild test
+# once you're happy with the results, run with the "switch" flag instead:
+sudo nixos-rebuild switch
+```
+
+**8. Commit them:**
 ```sh
 git commit -m "init hostname branch" -a
 ```
-**5. Push the new branch to the remote:**
+
+**9. Push the new branch to the remote:**
 ```sh
 git push
 ```
+
 **Note**: Setting up a remote url is not necessary as long as the config in `home-manager/git.nix` is used. Otherwise:
 ```sh
 git push --set-upstream origin branch-name
