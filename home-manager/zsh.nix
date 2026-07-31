@@ -41,6 +41,8 @@ in
       enable = true;
 
       shellAliases = {
+        # https://github.com/nix-community/plasma-manager/issues/195
+        fix_panels = "rm ~/.local/share/plasma-manager/last_run_*; ~/.local/share/plasma-manager/run_all.sh";
         adb = "HOME=\"$XDG_DATA_HOME\"/android adb";
         dir = "dir -lshA --color=auto";
         cat = "bat";
