@@ -36,7 +36,8 @@ gpg --armor --export KEYID
 ```sh
 git checkout --orphan hostname
 ```
-**3. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**
+**3. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
+*See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
 **4. Commit them:**
 ```sh
 git commit -m "init hostname branch" -a
