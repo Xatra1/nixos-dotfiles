@@ -18,10 +18,10 @@ Specs:
 nixos-dotfiles/                     # root
 |-- home-manager/                     # contains home-manager and plasma-manager modules
 |   |-- plasma/                         # plasma-manager modules
-|   |   |-- default.nix                 # imports plasma-manager modules, enables the config and contains configs i (arbitrarily) considered too short to be in their own file.
-|   |   |-- extra-config-files.nix      # anything in my config that couldn't be handled by a high-level plasma-manager module gets added to the config here by directly modifying the corresponding dotfile
+|   |   |-- default.nix                 # imports plasma-manager modules, enables the config and contains configs too short to be their own files
+|   |   |-- extra-config-files.nix      # anything in my config that couldn't be handled by a high-level module gets modified directly
 |   |   |-- kate.nix                    # configuration for the text editor Kate
-|   |   |-- panels.nix                  # my panel config, contains a unique top panel for both my primary and secondary displays and a bottom panel containg pinned icons
+|   |   |-- panels.nix                  # a unique top panel for both my primary and secondary displays and a bottom panel containg pinned icons
 |   |   |-- startup.nix                 # .desktop files to run when logging in
 |   |   |-- theme-fetch.nix             # declaratively sources the plasma themes i use
 |   |   |-- workspace.nix               # disables middle click paste (ew) + theme settings
@@ -37,11 +37,11 @@ nixos-dotfiles/                     # root
 |   |---- ssh.nix                     # ssh identity configs
 |   |---- zsh.nix                     # very extensive zsh config that pulls in some plugins and my custom theme
 |-- nix-derivations/                  # Submodule including custom-written nixpkgs. Documentation [here.](https://codeberg.org/solarfire/nix-derivations)
-|-- configuration.nix               # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to the other files in the root directory
+|-- configuration.nix               # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to the other root files
 |-- hardware.nix                    # mountpoint, graphics drivers, and udev rules
 |-- packages.nix                    # list of installed packages + some settings to get them to work properly
 |-- plasma-overlay.nix              # overlay to fix plasma's performance regression on NixOS
-|-- reused-strings.nix              # any generic string that gets used more than once throughout my config is probably defined here. currently contains cpu and gpu names and my wallpaper
+|-- reused-strings.nix              # any generic string that gets used more than once throughout my config is probably defined here.
 |-- services.nix                    # systemd services and their related configs
 ```
 
