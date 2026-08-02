@@ -13,6 +13,11 @@
   home-manager.users.solarfire = {
     imports = [ <plasma-manager/modules> ];
 
+    dconf = {
+      enable = true;
+      settings."desktop/ibus/panel".show-icon-on-systray = false;
+    };
+
     programs.plasma = {
       enable = true;
       overrideConfig = true;

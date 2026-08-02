@@ -27,6 +27,7 @@ in
     gparted
     headsetcontrol
     hyfetch
+    ibus
     (callPackage ./nix-derivations/ioquake3/package.nix { })
     (callPackage ./nix-derivations/ironwail/package.nix { })
     jellyfin
