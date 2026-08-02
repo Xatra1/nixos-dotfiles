@@ -32,7 +32,7 @@ ssh-add ~/.ssh/id_ed25519
 - GPG:
 ```sh
 gpg --full-generate-key # key should be a 4096 rsa key
-gpg --list-secret-keys --keyid-format=long
+gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1
 # copy the key id
 gpg --armor --export KEYID
 # create a new gpg key entry on codeberg and paste the result into the Content field
