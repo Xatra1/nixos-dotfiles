@@ -63,6 +63,11 @@ git checkout --orphan hostname
 **6. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
 *See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
 
+**Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
+```sh
+gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1
+```
+
 **7. Test the changes:**
 ```sh
 sudo nixos-rebuild test
