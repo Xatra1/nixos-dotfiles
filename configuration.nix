@@ -15,6 +15,7 @@
     };
 
     kernelPackages = pkgs.linuxPackages_zen;
+    zswap.enable = true;
   };
 
   networking = {
