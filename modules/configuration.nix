@@ -87,6 +87,7 @@
       use-xdg-base-directories = true;
       max-jobs = 1;
       cores = 16;
+      warn-dirty = false;
     };
   };
 
