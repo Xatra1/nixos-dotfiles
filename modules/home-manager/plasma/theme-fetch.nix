@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home-manager.users.solarfire.xdg.dataFile = with pkgs; {
+  xdg.dataFile = with pkgs; {
     "color-schemes/TokyoNight.colors".source = fetchurl {
       url = "https://raw.githubusercontent.com/Jayy-Dev/Plasma-Tokyo-Night/refs/heads/plasma-6/colorscheme/TokyoNight.colors";
       hash = "sha256-Qm6TY+5MCDIvvSkBn0iiLFL+ni4pMcokAJOtc2URelw=";

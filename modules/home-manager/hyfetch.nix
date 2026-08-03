@@ -1,5 +1,5 @@
 {
-  home-manager.users.solarfire.programs.hyfetch = {
+  programs.hyfetch = {
     enable = true;
 
     settings = {

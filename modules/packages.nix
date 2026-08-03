@@ -6,9 +6,43 @@ let
     "--enable-gpu-rasterization"
     "--enable-features=VaapiVideoDecodeLinuxGL"
   ];
+
+  miracode-nerd-font = pkgs.callPackage (pkgs.fetchurl {
+    url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/miracode/package.nix";
+    hash = "sha256-IrNPFv0w/kgxwrx1fWM+3UxBCWzFEGgGq8SIiuBtX1U=";
+  }) { };
+
+  ventoy_overlay = (
+    self: super: {
+      ventoy = super.ventoy.overrideAttrs (
+        final: prev: {
+          version = "1.1.17";
+
+          src = pkgs.fetchurl {
+            url = "https://github.com/ventoy/Ventoy/releases/download/v${final.version}/ventoy-${final.version}-linux.tar.gz";
+            hash = "sha256-f7TtCM72prTTndGSYNjIApGnjf35r31GFXHiPLvEOAU=";
+          };
+
+          patches = [
+            (pkgs.fetchurl {
+              url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ventoy/000-nixos-sanitization.patch";
+              hash = "sha256-Wn37erHT0TuaPswObiXk8vCJ4UUG+aS5OIYqcRBuPNQ=";
+            })
+          ];
+        }
+      );
+    }
+  );
 in
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [ "ventoy-1.1.17" ];
+    };
+
+    overlays = [ ventoy_overlay ];
+  };
 
   environment.systemPackages = with pkgs; [
     android-tools
@@ -24,6 +58,7 @@ in
     gcc
     git
     gparted
+    home-manager
     hyfetch
     jq
     kdePackages.filelight
@@ -45,7 +80,7 @@ in
     rustup
     tailscale
     typescript-language-server
-    (callPackage ./nix-derivations/ventoy/package.nix { })
+    ventoy
     vscode-langservers-extracted
     wget
     wine
@@ -54,7 +89,7 @@ in
   ];
 
   fonts.packages = with pkgs; [
-    (callPackage ./nix-derivations/miracode.nix { })
+    miracode-nerd-font
     noto-fonts
   ];
 

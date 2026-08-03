@@ -1,5 +1,5 @@
 {
-  home-manager.users.solarfire.programs.plasma.configFile = {
+  programs.plasma.configFile = {
     baloofilerc."Basic Settings".Indexing-Enabled = false;
 
     dolphinrc.DetailsMode = {

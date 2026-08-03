@@ -1,5 +1,5 @@
 {
-  home-manager.users.solarfire.programs.mpv = {
+  programs.mpv = {
     enable = true;
 
     config = {

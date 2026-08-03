@@ -1,5 +1,5 @@
 {
-  home-manager.users.solarfire.programs.git = {
+  programs.git = {
     enable = true;
 
     settings = {

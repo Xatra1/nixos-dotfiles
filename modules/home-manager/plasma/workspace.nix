@@ -2,7 +2,7 @@
 {
   imports = [ ../../reused-strings.nix ];
 
-  home-manager.users.solarfire.programs.plasma.workspace = {
+  programs.plasma.workspace = {
     enableMiddleClickPaste = false;
     theme = "Amethyst";
     colorScheme = "TokyoNight";

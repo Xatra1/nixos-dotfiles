@@ -2,7 +2,7 @@
 {
   imports = [ ../../reused-strings.nix ];
 
-  home-manager.users.solarfire.programs.plasma.panels = [
+  programs.plasma.panels = [
     {
       location = "top";
       height = 56;

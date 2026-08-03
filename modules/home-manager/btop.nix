@@ -6,11 +6,11 @@
 {
   imports = [ ../reused-strings.nix ];
 
-  home-manager.users.solarfire.programs.btop = {
+  programs.btop = {
     enable = true;
 
     settings = {
-      color_theme = "${pkgs.btop}/share/btop/themes/tokyo-night.theme";
+      color_theme = "tokyo-night";
       shown_boxes = "mem proc gpu0 cpu";
       update_ms = 100;
 

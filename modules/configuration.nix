@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
   imports = [
-    ./home-manager
     ./hardware.nix
     ./packages.nix
+    ./plasma-overlay.nix
     ./services.nix
   ];
 
@@ -75,10 +75,17 @@
   nix = {
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" ];
+
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+
       use-xdg-base-directories = true;
       max-jobs = 1;
       cores = 4;
+      substituters = [ "http://lemon:8080" ];
+      trusted-public-keys = [ "lemon-1:1fJuQldbYqwZDyJCYXfPPxLqeamn3YRwbJdCrWZHU1g=" ];
     };
 
     gc = {
