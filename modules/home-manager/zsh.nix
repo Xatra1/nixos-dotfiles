@@ -38,6 +38,7 @@ in
     "zsh/themes/burn.zsh-theme".source = "${burn}/burn.zsh-theme";
     "zsh/plugins/command-time.plugin.zsh".source = "${command-time}/command-time.plugin.zsh";
     "zsh/plugins/sudo.plugin.zsh".source = "${oh-my-zsh}/plugins/sudo/sudo.plugin.zsh";
+    "zsh/plugins/history-substring-search/".source = "${oh-my-zsh}/plugins/history-substring-search";
   };
 
   programs.zsh = {
@@ -152,7 +153,7 @@ in
       ZSH_COMMAND_TIME_MSG="Command ran for %s."
       ZSH_COMMAND_TIME_COLOR="blue"
 
-      source ${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+      source $PLUGIN_PATH/history-substring-search/history-substring-search.plugin.zsh
       bindkey '^[OA' history-substring-search-up
       bindkey '^[[A' history-substring-search-up
       bindkey '^[OB' history-substring-search-down
