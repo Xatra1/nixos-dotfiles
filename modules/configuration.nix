@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./home-manager
     ./hardware.nix
     ./packages.nix
     ./plasma-overlay.nix
@@ -79,7 +78,12 @@
   nix = {
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" ];
+
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+
       use-xdg-base-directories = true;
       max-jobs = 1;
       cores = 16;

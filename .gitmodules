@@ -1,3 +1,0 @@
-[submodule "nix-derivations"]
-	path = nix-derivations
-	url = https://codeberg.org/solarfire/nix-derivations

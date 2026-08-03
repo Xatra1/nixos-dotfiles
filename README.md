@@ -6,13 +6,13 @@
 
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
-  
-**1. Add Nix channels:**
-```sh
-sudo nix-channel --add https://channels.nixos.org/nixos-unstable nixos
-sudo nix-channel --add https://github.com/nix-community/plasma-manager/archive/trunk.tar.gz plasma-manager
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-sudo nix-channel --update
+
+**1, Modify the "hostname" binding in the flake:**
+```nix
+# flake.nix
+let
+  hostname = "lemon"; # your hostname here
+in
 ```
 
 **2. Generate unique SSH and GPG key pairs for the new host:**
@@ -92,34 +92,36 @@ git push --set-upstream origin branch-name
 
 # Structure
 ```
-nixos-dotfiles/                   # root
-├─ home-manager/                    # contains home-manager and plasma-manager modules
-│  ├─ plasma/                         # plasma-manager modules
-│  │  ├─ default.nix                  # imports plasma-manager modules, enables the config and contains configs too short to be their own files
-│  │  ├─ extra-config-files.nix       # anything in my config that couldn't be handled by a high-level module gets modified directly
-│  │  ├─ kate.nix                     # configuration for the text editor Kate
-│  │  ├─ panels.nix                   # a unique top panel for both my primary and secondary displays and a bottom panel containg pinned icons
-│  │  ├─ startup.nix                  # .desktop files to run when logging in
-│  │  ├─ theme-fetch.nix              # declaratively sources the plasma themes i use
-│  │  └─ workspace.nix                # disables middle click paste (ew) + theme settings
-│  ├─ btop.nix                      # btop config
-│  ├─ default.nix                   # enables home-manager + some boilerplate stuff
-│  ├─ easyeffects.nix               # equalizer config because my headphones have negative bass
-│  ├─ equibop.nix                   # (mostly) plugin settings for equibop
-│  ├─ fastfetch.nix                 # fastfetch because im unemployed
-│  ├─ git.nix                       # git config
-│  ├─ hyfetch.nix                   # hyfetch because im gay
-│  ├─ kitty.nix                     # kitty is the best terminal Ever
-│  ├─ mpv.nix                       # i barely use mpv idk why i made its config declarative
-│  ├─ ssh.nix                       # ssh identity configs
-│  └─ zsh.nix                       # very extensive zsh config that pulls in some plugins and my custom theme
-├─ nix-derivations/               # Submodule including custom-written nixpkgs
-├─ configuration.nix              # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to the other root files
-├─ hardware.nix                   # mountpoints, graphics drivers, and udev rules
-├─ packages.nix                   # list of installed packages + some settings to get them to work properly
-├─ plasma-overlay.nix             # overlay to fix plasma's performance regression on NixOS
-├─ reused-strings.nix             # any generic string that gets used more than once throughout my config is probably defined here
-└─ services.nix                   # systemd services and their related configs
+nixos-dotfiles/                       # root
+├─ modules/                             # nix modules
+│   ├─ home-manager/                      # home-manager and plasma-manager modules
+│   │  ├─ plasma/                           # plasma-manager modules
+│   │  │  ├─ default.nix                    # imports plasma-manager modules, enables the config and contains configs too short to be separated
+│   │  │  ├─ extra-config-files.nix         # anything in my config that couldn't be handled by a high-level module gets modified directly
+│   │  │  ├─ kate.nix                       # configuration for the text editor Kate
+│   │  │  ├─ panels.nix                     # a unique top panel for both of my displays and a bottom panel containg pinned icons
+│   │  │  ├─ startup.nix                    # .desktop files to run when logging in
+│   │  │  ├─ theme-fetch.nix                # declaratively sources the plasma themes i use
+│   │  │  └─ workspace.nix                  # disables middle click paste (ew) + theme settings
+│   │  ├─ btop.nix                        # btop config
+│   │  ├─ default.nix                     # enables home-manager + some boilerplate stuff
+│   │  ├─ easyeffects.nix                 # equalizer config because my headphones have negative bass
+│   │  ├─ equibop.nix                     # (mostly) plugin settings for equibop
+│   │  ├─ fastfetch.nix                   # fastfetch because im unemployed
+│   │  ├─ git.nix                         # git config
+│   │  ├─ hyfetch.nix                     # hyfetch because im gay
+│   │  ├─ kitty.nix                       # kitty is the best terminal Ever
+│   │  ├─ mpv.nix                         # i barely use mpv idk why i made its config declarative
+│   │  ├─ ssh.nix                         # ssh identity configs
+│   │  └─ zsh.nix                         # very extensive zsh config that pulls in some plugins and my custom theme
+│   ├─ configuration.nix                # generic system config and nix settings. anything i (arbitrarily) deemed irrelevant to other root files
+│   ├─ hardware.nix                     # mountpoints, graphics drivers, and udev rules
+│   ├─ packages.nix                     # list of installed packages + some settings to get them to work properly
+│   ├─ plasma-overlay.nix               # overlay to fix plasma's performance regression on NixOS
+│   ├─ reused-strings.nix               # any generic string that gets used more than once throughout my config is probably defined here
+│   └─ services.nix                     # systemd services and their related configs
+├─ flake.lock                         # input version pinning
+└─ flake.nix                          # contains nixpkgs, home-manager, and plasma-manager inputs
 ```
 
 # Won't Declaratively Configure

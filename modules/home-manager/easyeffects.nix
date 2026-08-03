@@ -7,7 +7,7 @@ let
   '';
 in
 {
-  home-manager.users.solarfire.xdg.configFile = {
+  xdg.configFile = {
     "easyeffects/db/easyeffectsrc".text = ''
       [StreamOutputs]
       outputDevice=alsa_output.usb-Logitech_G535_Wireless_Gaming_Headset-00.analog-stereo

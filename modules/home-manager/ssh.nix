@@ -1,5 +1,5 @@
 {
-  home-manager.users.solarfire.programs.ssh = {
+  programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
 

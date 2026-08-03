@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home-manager.users.solarfire.xdg.configFile = {
+  xdg.configFile = {
     "autostart/easyeffects.desktop".text = ''
       [Desktop Entry]
       Type=Application
