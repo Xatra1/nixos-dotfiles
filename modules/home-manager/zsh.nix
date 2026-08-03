@@ -41,6 +41,11 @@ in
     "zsh/plugins/history-substring-search/".source = "${oh-my-zsh}/plugins/history-substring-search";
   };
 
+  programs.nix-index = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
 
