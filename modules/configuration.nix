@@ -88,11 +88,6 @@
       max-jobs = 1;
       cores = 16;
     };
-
-    gc = {
-      automatic = true;
-      dates = "daily";
-    };
   };
 
   nixpkgs = {

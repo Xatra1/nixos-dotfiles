@@ -93,7 +93,6 @@ in
     git
     gparted
     headsetcontrol
-    home-manager
     hyfetch
     ibus
     ioquake3
@@ -115,11 +114,11 @@ in
     mkvtoolnix
     mpv
     neovim
+    nh
     nil
     nix-serve
     nixfmt
     nodejs-slim
-    nvd
     obs-studio
     p7zip
     prettier
@@ -191,6 +190,15 @@ in
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
+    };
+
+    nh = {
+      enable = true;
+
+      clean = {
+        enable = true;
+        dates = "daily";
+      };
     };
   };
 }
