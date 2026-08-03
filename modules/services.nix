@@ -49,6 +49,12 @@
         reverse_proxy :7878
       '';
     };
+
+    nix-serve = {
+      enable = true;
+      port = 8080;
+      secretKeyFile = "/home/solarfire/.local/share/nix-keys/secret";
+    };
   };
 
   # Nix does not let you use integers on the left side of a binding without
@@ -112,6 +118,7 @@
   networking.firewall.allowedTCPPorts = [
     80
     443
+    8080
   ];
 
   networking.firewall.allowedUDPPorts = [

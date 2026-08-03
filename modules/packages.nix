@@ -116,6 +116,7 @@ in
     mpv
     neovim
     nil
+    nix-serve
     nixfmt
     nodejs-slim
     nvd
