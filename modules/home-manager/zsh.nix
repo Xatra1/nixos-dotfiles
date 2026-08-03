@@ -144,6 +144,7 @@ in
       export PATH=$PATH:/home/solarfire/.local/bin:$CARGO_HOME/bin
       export THEME_PATH=$ZDOTDIR/themes
       export PLUGIN_PATH=$ZDOTDIR/plugins
+      export NH_FLAKE="/home/solarfire/Documents/Projects/nixos-dotfiles"
 
       setopt interactivecomments
 
