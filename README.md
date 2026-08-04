@@ -69,11 +69,10 @@ git checkout --orphan hostname
 gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1
 ```
 
-**7. Test the changes:**
+**7. Switch to the changed config:**
 ```sh
-sudo nixos-rebuild test
-# once you're happy with the results, run with the "switch" flag instead:
-sudo nixos-rebuild switch
+# assuming you're in the flake
+sudo nixos-rebuild switch --flake .#hostname
 ```
 
 **8. Commit them:**
