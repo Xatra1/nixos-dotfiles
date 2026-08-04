@@ -1,8 +1,9 @@
 # Hosts
-| Name         | Description                                                          | CPU                 | GPU                                          | RAM            | Storage            |
-|--------------|----------------------------------------------------------------------|---------------------|----------------------------------------------|----------------|--------------------|
-| `lemon`      | Main desktop. Also used as a "server" for file hosting and Jellyfin. | Intel Core i7-11700 | Integrated UHD 750 + NVIDIA GeForce RTX 3050 | 32GB DDR4-2666 | 1TB NVMe + 4TB HDD |
-| `clementine` | Terrible laptop I got from school in my junior year.                 | Intel Core i3-6100U | Integrated HD 520                            | 8GB DDR3L-1600 | 128GB SSD          |
+| Name         | Description                                                          | CPU                 | GPU                                          | RAM            | Storage              |
+|--------------|----------------------------------------------------------------------|---------------------|----------------------------------------------|----------------|----------------------|
+| `lemon`      | Main desktop. Also used as a "server" for file hosting and Jellyfin. | Intel Core i7-11700 | Integrated UHD 750 + NVIDIA GeForce RTX 3050 | 32GB DDR4-2666 | 500GB NVMe + 4TB HDD |
+| `clementine` | Terrible laptop I got from school in my junior year.                 | Intel Core i3-6100U | Integrated HD 520                            | 8GB DDR3L-1600 | 128GB SSD            |
+
 
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
