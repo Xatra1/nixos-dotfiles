@@ -72,7 +72,9 @@ gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1
 **7. Switch to the changed config:**
 ```sh
 # assuming you're in the flake
-sudo nixos-rebuild switch --flake .#hostname
+sudo nixos-rebuild switch --flake .#hostname -L
+# home-manager
+home-manager switch --flake .#hostname -L
 ```
 
 **8. Commit them:**
