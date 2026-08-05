@@ -80,9 +80,9 @@
       })
     );
 
-    "icons/Oxygen 08 Indigo".source = (
+    "icons/Oxygen 14 Matrix Green".source = (
       stdenv.mkDerivation (finalAttrs: {
-        themeName = "navy";
+        themeName = "midnight_meadow";
         name = "oxygen-cursor-${finalAttrs.themeName}";
         version = "6.6.0";
 
@@ -111,7 +111,7 @@
           mv oxy-${finalAttrs.themeName} $out
 
           echo "[Icon Theme]
-          Name = Oxygen Indigo
+          Name = Oxygen Matrix Green
           Comment = Oxygen mouse theme. Oxygenize your desktop!" > $out/index.theme
 
           rm -r $out/{config,cursors_scalable,png,svg}

@@ -8,7 +8,7 @@
     colorScheme = "TokyoNight";
     iconTheme = "Tela-circle-dark";
     wallpaper = config.wallpaper;
-    cursor.theme = "Oxygen 08 Indigo";
+    cursor.theme = "Oxygen 14 Matrix Green";
 
     windowDecorations = {
       library = "org.kde.breeze";
