@@ -85,7 +85,7 @@ git commit -m "init hostname branch" -a
 git push
 ```
 
-**Note**: Setting up a remote url is not necessary as long as `settings.push.autoSetupRemote` is set to `true` in `home-manager/git.nix` is used. Otherwise:
+**Note**: Setting up a remote url is not necessary as long as `settings.push.autoSetupRemote` is set to `true` in `home-manager/git.nix`. Otherwise:
 ```sh
 git push --set-upstream origin branch-name
 ```
