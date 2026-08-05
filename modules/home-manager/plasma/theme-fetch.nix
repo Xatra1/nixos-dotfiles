@@ -82,7 +82,8 @@
 
     "icons/Oxygen 08 Indigo".source = (
       stdenv.mkDerivation (finalAttrs: {
-        name = "plasma-cursor-theme";
+        themeName = "navy";
+        name = "oxygen-cursor-${finalAttrs.themeName}";
         version = "6.6.0";
 
         src = fetchurl {
@@ -103,8 +104,6 @@
 
           cmake .
         '';
-
-        themeName = "navy";
         enableParallelBuilding = true;
         buildFlags = [ "theme-${finalAttrs.themeName}" ];
 
