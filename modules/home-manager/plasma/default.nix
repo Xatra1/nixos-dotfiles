@@ -18,7 +18,11 @@
   programs.plasma = {
     enable = true;
     overrideConfig = true;
-    input.keyboard.numlockOnStartup = "on";
+
+    input.keyboard = {
+      numlockOnStartup = "on";
+      options = [ "caps:none" ];
+    };
 
     kscreenlocker = {
       autoLock = false;
