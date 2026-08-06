@@ -80,13 +80,19 @@ in
   environment.systemPackages = with pkgs; [
     android-tools
     bat
-    btop
+
+    (btop.override {
+      config.cudaSupport = true;
+      config.rocmSupport = false; # needs to be explicitly disabled if cuda support is enabled?
+    })
+
     caddy
     docker
     easyeffects
     equibop
     fastfetch
-    ffmpeg
+    (ffmpeg.override { config.cudaSupport = true; })
+    (ffmpeg_7-full.override { config.cudaSupport = true; })
     flatpak
     gcc
     gimp

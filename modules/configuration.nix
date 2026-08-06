@@ -91,10 +91,7 @@
     };
   };
 
-  nixpkgs = {
-    config.cudaSupport = true;
-    hostPlatform = "x86_64-linux";
-  };
+  nixpkgs.hostPlatform = "x86_64-linux";
 
   # boring nerd shit. dont change
   system.stateVersion = "26.05"; # Did you read the comment?
