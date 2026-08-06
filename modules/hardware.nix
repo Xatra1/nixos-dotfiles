@@ -18,7 +18,7 @@
     "/" = {
       device = "/dev/disk/by-uuid/d8caa12a-e5b4-4a71-8265-79b083aafe61";
       fsType = "btrfs";
-      options = [ "compress=zstd:6" ];
+      options = [ "compress=zstd:9" ];
     };
 
     "/boot" = {
@@ -39,7 +39,7 @@
     "/home" = {
       device = "/dev/disk/by-uuid/b01e186c-cf65-4b42-9f2f-d96ffa6052d6";
       fsType = "btrfs";
-      options = [ "compress=zstd:3" ];
+      options = [ "compress=zstd:9" ];
     };
 
     "/media" = {
@@ -56,7 +56,7 @@
     "/media/backup-data" = {
       device = "/dev/disk/by-uuid/dec78277-1b28-40cc-8dd1-56db72db9e4b";
       fsType = "btrfs";
-      options = [ "compress=zstd:3" ];
+      options = [ "compress=zstd:9" ];
     };
   };
 
