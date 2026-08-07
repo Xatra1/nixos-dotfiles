@@ -80,6 +80,11 @@ in
         YoutubeAdblock.enabled = true;
 
         # equicord
+        AutoJumpToMessage = {
+          enabled = true;
+          onlyWhenUnfocused = true;
+        };
+
         BlockKrisp.enabled = true;
 
         Declutter = {
