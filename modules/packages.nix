@@ -63,6 +63,13 @@ let
       );
     }
   );
+
+  btop = pkgs.btop.override {
+    config.cudaSupport = true;
+    config.rocmSupport = false; # needs to be explicitly disabled if cuda support is enabled?
+  };
+
+  ffmpeg = pkgs.ffmpeg.override { config.cudaSupport = true; };
 in
 {
   nixpkgs = {
@@ -80,19 +87,13 @@ in
   environment.systemPackages = with pkgs; [
     android-tools
     bat
-
-    (btop.override {
-      config.cudaSupport = true;
-      config.rocmSupport = false; # needs to be explicitly disabled if cuda support is enabled?
-    })
-
+    btop
     caddy
     docker
     easyeffects
     equibop
     fastfetch
-    (ffmpeg.override { config.cudaSupport = true; })
-    (ffmpeg_7-full.override { config.cudaSupport = true; })
+    ffmpeg
     flatpak
     gcc
     gimp
