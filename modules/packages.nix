@@ -18,7 +18,7 @@ let
 
   ironwail = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ironwail/package.nix";
-    hash = "sha256-T4+22uUvTvz9YERKBrRW6aqYbxKfLckRCSVKsvabVpU=";
+    hash = "sha256-kmMUbcGRPXm3lpJZpHEAh6YObDNNNgfLP0emUXk51ao=";
   }) { };
 
   kate-discord-rpc = pkgs.callPackage (pkgs.fetchurl {
