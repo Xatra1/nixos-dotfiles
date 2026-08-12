@@ -31,6 +31,11 @@ let
     hash = "sha256-IrNPFv0w/kgxwrx1fWM+3UxBCWzFEGgGq8SIiuBtX1U=";
   }) { };
 
+  steelseriesgg-rs = pkgs.callPackage (pkgs.fetchurl {
+    url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/steelseriesgg-rs/package.nix";
+    hash = "sha256-Io9OWJm5GOor9UjiXe4dSX+lTaW7TnVHnO5Wqnc2Njg=";
+  }) { };
+
   spotify = pkgs.symlinkJoin {
     name = "spotify";
     paths = [ pkgs.spotify ];
@@ -140,6 +145,7 @@ in
     sonarr
     spotify
     steam
+    steelseriesgg-rs
     tailscale
     typescript-language-server
     ventoy
@@ -182,6 +188,20 @@ in
   systemd.tmpfiles.rules = [
     "Z /sys/class/powercap/intel-rapl:0/energy_uj 0444 root root - -"
   ];
+
+  # unsure how to import the steelseriesgg-rs binding into services.nix, so
+  # this will have to remain here.
+  systemd.user.services.ssgg = {
+    enable = true;
+    unitConfig.ConditionUser = "solarfire";
+    wantedBy = [ "default.target" ];
+    description = "SteelSeries GG Linux Daemon";
+
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${steelseriesgg-rs}/bin/ssgg daemon";
+    };
+  };
 
   programs = {
     nano.enable = false;
