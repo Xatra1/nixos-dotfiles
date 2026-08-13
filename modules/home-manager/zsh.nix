@@ -141,6 +141,10 @@ in
       zstyle ':completion:*' menu select
       select-word-style bash
 
+      autoload edit-command-line
+      zle -N edit-command-line
+      bindkey '^X^E' edit-command-line
+
       export PATH=$PATH:/home/solarfire/.local/bin:$CARGO_HOME/bin
       export THEME_PATH=$ZDOTDIR/themes
       export PLUGIN_PATH=$ZDOTDIR/plugins
