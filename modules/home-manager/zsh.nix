@@ -66,8 +66,8 @@ in
       ignoreSpace = true;
       path = "/home/solarfire/.config/zsh/zsh-history";
       share = true;
-      size = 9223372036854775807; # LONG_MAX
-      save = 9223372036854775807;
+      size = 1000000000;
+      save = 1000000000;
     };
 
     syntaxHighlighting = {
