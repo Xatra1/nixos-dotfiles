@@ -6,11 +6,13 @@
       "modules" = [
         "title"
         "separator"
+
         {
           type = "command";
           key = "OS";
           text = "source /etc/os-release; echo \"$PRETTY_NAME Generation $(readlink /nix/var/nix/profiles/system | grep -o \"[0-9]*\")\"";
         }
+
         "host"
         "kernel"
         "uptime"
@@ -33,6 +35,7 @@
         "disk"
         "localip"
         "locale"
+
         {
           type = "command";
           key = "Days since install";
