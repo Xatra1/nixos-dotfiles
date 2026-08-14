@@ -19,9 +19,9 @@ nix-shell -p git
 
 **2. Clone the repository:**
 ```sh
-git clone git@codeberg.org:solarfire/nixos-dotfiles
+git clone https://codeberg.org/solarfire/nixos-dotfiles
 # you can also use the following mirror if codeberg happens to be down:
-git clone git@github.com:Xatra1/nixos-dotfiles
+git clone https://github.com/Xatra1/nixos-dotfiles
 ```
 
 **3. Create an orphan branch based off the latest master commit:**
