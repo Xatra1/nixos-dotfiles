@@ -79,10 +79,13 @@ gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g
 
 **8. Switch to the changed config:**
 ```sh
-# assuming you're in the flake
-sudo nixos-rebuild switch --flake .#hostname -L
-# home-manager
-home-manager switch --flake .#hostname -L
+# spawn a shell with nh
+nix-shell -p nh
+# set NH_FLAKE so nh knows where your flake is
+NH_FLAKE=/path/to/flake
+nh os switch --ask -Lu
+# then you can also activate home-manager configs
+nh home switch --ask -L
 ```
 
 **9. Commit the changes:**
