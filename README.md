@@ -12,12 +12,30 @@
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
 
-**1. Spawn a shell with the necessary utilities:**
+**1. Open the current NixOS configuration in an editor:**
 ```sh
-nix-shell -p wl-clipboard git nh
+sudo nixos-rebuild edit
 ```
 
-**2. Generate unique SSH and GPG key pairs for the new host:**
+**2. Add `wl-clipboard` to the list of installed packages:**
+```nix
+# configuration.nix
+environment.systemPackages = with pkgs; [
+  wl-clipboard
+];
+```
+
+**3. Build the new config without adding a generation:**
+```sh
+sudo nixos-rebuild test
+```
+
+**4. Spawn a shell with the necessary utilities:**
+```sh
+nix-shell -p git nh
+```
+
+**5. Generate unique SSH and GPG key pairs for the new host:**
 - SSH:
 ```sh
 ssh-keygen
@@ -44,19 +62,19 @@ gpg --armor --export KEYID
 # field
 ```
 
-**3. Clone the repository:**
+**6. Clone the repository:**
 ```sh
 git clone git@codeberg.org:solarfire/nixos-dotfiles
 # you can also use the following mirror if codeberg happens to be down:
 git clone git@github.com:Xatra1/nixos-dotfiles
 ```
 
-**4. Create an orphan branch based off the latest master commit:**
+**7. Create an orphan branch based off the latest master commit:**
 ```sh
 git checkout --orphan hostname
 ```
 
-**5. Modify the "hostname" binding in the flake:**
+**8. Modify the "hostname" binding in the flake:**
 ```nix
 # flake.nix
 let
@@ -64,7 +82,7 @@ let
 in
 ```
 
-**6. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
+**9. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
 *See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
 
 **Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
@@ -72,7 +90,7 @@ in
 gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n'
 ```
 
-**7. Switch to the changed config:**
+**10. Switch to the changed config:**
 ```sh
 # set NH_FLAKE so nh knows where your flake is
 NH_FLAKE=/path/to/flake
@@ -81,12 +99,12 @@ nh os switch --ask -Lu
 nh home switch --ask -L
 ```
 
-**8. Commit the changes:**
+**11. Commit the changes:**
 ```sh
 git commit -m "init hostname branch" -a
 ```
 
-**9. Push the new branch to the remote:**
+**12. Push the new branch to the remote:**
 ```sh
 git push
 ```
