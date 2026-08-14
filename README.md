@@ -1,3 +1,5 @@
+This host has been discontinued and this branch remains only as an archive of the latest state of it's configuration.
+
 # Structure
 This only lists the differences between this branch and `master`.
 ```
