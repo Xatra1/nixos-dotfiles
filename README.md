@@ -47,11 +47,8 @@ gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g
 
 **6. Switch to the changed config:**
 ```sh
-# set NH_FLAKE so nh knows where your flake is
-NH_FLAKE=/path/to/flake
-nh os switch --ask -Lu
-# then you can also activate home-manager configs
-nh home switch --ask -L
+# assuming you're currently in the flake
+nix build -L .#nixosConfigurations.hostname.config.system.build.toplevel --extra-experimental-features "nix-command flakes" 
 ```
 
 **7. Generate unique SSH and GPG key pairs for the new host:**
