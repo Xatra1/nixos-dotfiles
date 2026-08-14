@@ -37,8 +37,7 @@ let
 in
 ```
 
-**5. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
-*See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
+**5. Make any necessary changes.**
 
 **Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
 ```sh
