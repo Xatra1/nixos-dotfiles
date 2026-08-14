@@ -39,7 +39,7 @@ in
 
 **5. Make any necessary changes.**
 
-**Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
+**Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find by running this command after step 7:
 ```sh
 gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n'
 ```
