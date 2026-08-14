@@ -86,7 +86,7 @@
       max-jobs = 1;
       cores = 4;
       warn-dirty = false;
-      substituters = [ "http://lemon:8080" ];
+      substituters = [ "http://lemon:8080?priority=100" ];
       trusted-public-keys = [ "lemon-1:HDAKLAuAFxJGPLnbnGBI9j9FDYqe04WeTlBWb3Z7UxE=" ];
     };
   };
