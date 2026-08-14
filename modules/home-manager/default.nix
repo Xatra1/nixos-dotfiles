@@ -7,6 +7,7 @@
     ./hyfetch.nix
     ./kitty.nix
     ./mpv.nix
+    ./xdg-base-dir.nix
     ./zsh.nix
   ];
 
