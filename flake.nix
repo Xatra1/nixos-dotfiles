@@ -7,6 +7,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +25,8 @@
       nixpkgs,
       home-manager,
       plasma-manager,
+      nix-index-database,
+
       ...
     }@inputs:
     let
@@ -38,6 +45,7 @@
         modules = [
           ./modules/home-manager
           plasma-manager.homeModules.plasma-manager
+          nix-index-database.homeModules.default
         ];
       };
     };
