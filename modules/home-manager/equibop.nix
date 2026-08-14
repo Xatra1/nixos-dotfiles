@@ -67,6 +67,7 @@ in
 
         PlatformIndicators.enabled = true;
         RelationshipNotifier.enabled = true;
+        ReviewDB.enabled = true;
 
         ShikiCodeblocks = {
           enabled = true;
