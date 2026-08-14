@@ -32,7 +32,7 @@ sudo nixos-rebuild test
 
 **4. Spawn a shell with the necessary utilities:**
 ```sh
-nix-shell -p git nh
+nix-shell -p git nh gnupg
 ```
 
 **5. Generate unique SSH and GPG key pairs for the new host:**
