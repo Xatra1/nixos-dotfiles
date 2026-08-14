@@ -12,30 +12,49 @@
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
 
-**1. Open the current NixOS configuration in an editor:**
+**1. Spawn a shell with git::**
 ```sh
-sudo nixos-rebuild edit
+nix-shell -p git
 ```
 
-**2. Add `wl-clipboard` to the list of installed packages:**
+**2. Clone the repository:**
+```sh
+git clone git@codeberg.org:solarfire/nixos-dotfiles
+# you can also use the following mirror if codeberg happens to be down:
+git clone git@github.com:Xatra1/nixos-dotfiles
+```
+
+**3. Create an orphan branch based off the latest master commit:**
+```sh
+git checkout --orphan hostname
+```
+
+**4. Modify the "hostname" binding in the flake:**
 ```nix
-# configuration.nix
-environment.systemPackages = with pkgs; [
-  wl-clipboard
-];
+# flake.nix
+let
+  hostname = "lemon"; # your hostname here
+in
 ```
 
-**3. Build the new config without adding a generation:**
+**5. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
+*See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
+
+**Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
 ```sh
-sudo nixos-rebuild test
+gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n'
 ```
 
-**4. Spawn a shell with the necessary utilities:**
+**6. Switch to the changed config:**
 ```sh
-nix-shell -p git nh gnupg
+# set NH_FLAKE so nh knows where your flake is
+NH_FLAKE=/path/to/flake
+nh os switch --ask -Lu
+# then you can also activate home-manager configs
+nh home switch --ask -L
 ```
 
-**5. Generate unique SSH and GPG key pairs for the new host:**
+**7. Generate unique SSH and GPG key pairs for the new host:**
 - SSH:
 ```sh
 ssh-keygen
@@ -62,49 +81,17 @@ gpg --armor --export KEYID
 # field
 ```
 
-**6. Clone the repository:**
+**8. Change the remote from HTTPS to SSH:**
 ```sh
-git clone git@codeberg.org:solarfire/nixos-dotfiles
-# you can also use the following mirror if codeberg happens to be down:
-git clone git@github.com:Xatra1/nixos-dotfiles
+git remote set-url origin git@codeberg.org:solarfire/nixos-dotfiles
 ```
 
-**7. Create an orphan branch based off the latest master commit:**
-```sh
-git checkout --orphan hostname
-```
-
-**8. Modify the "hostname" binding in the flake:**
-```nix
-# flake.nix
-let
-  hostname = "lemon"; # your hostname here
-in
-```
-
-**9. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
-*See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
-
-**Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
-```sh
-gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n'
-```
-
-**10. Switch to the changed config:**
-```sh
-# set NH_FLAKE so nh knows where your flake is
-NH_FLAKE=/path/to/flake
-nh os switch --ask -Lu
-# then you can also activate home-manager configs
-nh home switch --ask -L
-```
-
-**11. Commit the changes:**
+**9. Commit the changes:**
 ```sh
 git commit -m "init hostname branch" -a
 ```
 
-**12. Push the new branch to the remote:**
+**10. Push the new branch to the remote:**
 ```sh
 git push
 ```
