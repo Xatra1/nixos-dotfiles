@@ -12,15 +12,7 @@
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
 
-**1, Modify the "hostname" binding in the flake:**
-```nix
-# flake.nix
-let
-  hostname = "lemon"; # your hostname here
-in
-```
-
-**2. Generate unique SSH and GPG key pairs for the new host:**
+**1. Generate unique SSH and GPG key pairs for the new host:**
 - SSH:
 ```sh
 ssh-keygen
@@ -47,21 +39,29 @@ gpg --armor --export KEYID
 # field
 ```
 
-**3. Spawn a shell with git:**
+**2. Spawn a shell with git:**
 ```sh
 nix-shell -p git
 ```
 
-**4. Clone the repository:**
+**3. Clone the repository:**
 ```sh
 git clone --recursive git@codeberg.org:solarfire/nixos-dotfiles
 # you can also use the following mirror if codeberg happens to be down:
 git clone --recursive git@github.com:Xatra1/nixos-dotfiles
 ```
 
-**5. Create an orphan branch based off the latest master commit:**
+**4. Create an orphan branch based off the latest master commit:**
 ```sh
 git checkout --orphan hostname
+```
+
+**5. Modify the "hostname" binding in the flake:**
+```nix
+# flake.nix
+let
+  hostname = "lemon"; # your hostname here
+in
 ```
 
 **6. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
