@@ -46,9 +46,9 @@ nix-shell -p git
 
 **3. Clone the repository:**
 ```sh
-git clone --recursive git@codeberg.org:solarfire/nixos-dotfiles
+git clone git@codeberg.org:solarfire/nixos-dotfiles
 # you can also use the following mirror if codeberg happens to be down:
-git clone --recursive git@github.com:Xatra1/nixos-dotfiles
+git clone git@github.com:Xatra1/nixos-dotfiles
 ```
 
 **4. Create an orphan branch based off the latest master commit:**
