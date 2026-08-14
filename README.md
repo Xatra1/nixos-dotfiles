@@ -12,9 +12,9 @@
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
 
-**1. Spawn a shell with `wl-clipboard`:**
+**1. Spawn a shell with the necessary utilities:**
 ```sh
-nix-shell -p wl-clipboard
+nix-shell -p wl-clipboard git nh
 ```
 
 **2. Generate unique SSH and GPG key pairs for the new host:**
@@ -44,24 +44,19 @@ gpg --armor --export KEYID
 # field
 ```
 
-**3. Spawn a shell with ``git``:**
-```sh
-nix-shell -p git
-```
-
-**4. Clone the repository:**
+**3. Clone the repository:**
 ```sh
 git clone git@codeberg.org:solarfire/nixos-dotfiles
 # you can also use the following mirror if codeberg happens to be down:
 git clone git@github.com:Xatra1/nixos-dotfiles
 ```
 
-**5. Create an orphan branch based off the latest master commit:**
+**4. Create an orphan branch based off the latest master commit:**
 ```sh
 git checkout --orphan hostname
 ```
 
-**6. Modify the "hostname" binding in the flake:**
+**5. Modify the "hostname" binding in the flake:**
 ```nix
 # flake.nix
 let
@@ -69,7 +64,7 @@ let
 in
 ```
 
-**7. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
+**6. Make any necessary changes. All differences between the main branch and the new host should be documented in a structure like below.**  
 *See the [clementine branch README](https://codeberg.org/solarfire/nixos-dotfiles/src/branch/clementine/README.md) for an example.*  
 
 **Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
@@ -77,10 +72,8 @@ in
 gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n'
 ```
 
-**8. Switch to the changed config:**
+**7. Switch to the changed config:**
 ```sh
-# spawn a shell with nh
-nix-shell -p nh
 # set NH_FLAKE so nh knows where your flake is
 NH_FLAKE=/path/to/flake
 nh os switch --ask -Lu
@@ -88,12 +81,12 @@ nh os switch --ask -Lu
 nh home switch --ask -L
 ```
 
-**9. Commit the changes:**
+**8. Commit the changes:**
 ```sh
 git commit -m "init hostname branch" -a
 ```
 
-**10. Push the new branch to the remote:**
+**9. Push the new branch to the remote:**
 ```sh
 git push
 ```
