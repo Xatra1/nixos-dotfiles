@@ -37,8 +37,7 @@ ssh-add ~/.ssh/id_ed25519
 - GPG:
 ```sh
 gpg --full-generate-key # key should be a 4096 rsa key
-gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1
-# copy the key id
+gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n' | wl-copy -t text/plain # copies the key id, which should replace KEYID in the below command
 gpg --armor --export KEYID
 # create a new gpg key entry on codeberg and paste the result into the Content field
 # you will need to add the key to github as well
@@ -70,7 +69,7 @@ git checkout --orphan hostname
 
 **Note**: Before you can commit, you will need to change `settings.signing.key` in `home-manager/git.nix` to the host's new GPG key ID, which you can find using this command:
 ```sh
-gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1
+gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g' | tr -d '\n'
 ```
 
 **7. Switch to the changed config:**
@@ -81,7 +80,7 @@ sudo nixos-rebuild switch --flake .#hostname -L
 home-manager switch --flake .#hostname -L
 ```
 
-**8. Commit them:**
+**8. Commit the changes:**
 ```sh
 git commit -m "init hostname branch" -a
 ```
