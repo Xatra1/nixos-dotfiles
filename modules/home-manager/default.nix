@@ -10,6 +10,7 @@
     ./kitty.nix
     ./mpv.nix
     ./ssh.nix
+    ./xdg-base-dir.nix
     ./zsh.nix
   ];
 
