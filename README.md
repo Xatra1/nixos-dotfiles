@@ -12,7 +12,7 @@
 ## Adding a host
 **Replace any instance of "hostname" below with the hostname of the device.**  
 
-**1. Spawn a shell with git::**
+**1. Spawn a shell with git:**
 ```sh
 nix-shell -p git
 ```
