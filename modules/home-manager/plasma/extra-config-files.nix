@@ -62,12 +62,12 @@
       Effect-overview.BorderActivate = 9;
 
       Plugins = {
-        blurEnabled = true;
+        blurEnabled = false;
         frozenappEnabled = false;
         screenedgeEnabled = false;
         shakecursorEnabled = false;
         trackmouseEnabled = true;
-        translucencyEnabled = true;
+        translucencyEnabled = false;
       };
 
       TabBox = {

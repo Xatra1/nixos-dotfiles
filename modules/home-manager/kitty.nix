@@ -25,8 +25,7 @@ in
     settings = {
       font_features = "MiracodeNF -liga";
 
-      background_opacity = 0.7;
-      background_blur = 1;
+      background_opacity = 0.9;
 
       scrollback_lines = 5000;
       wheel_scroll_multiplier = 1;
