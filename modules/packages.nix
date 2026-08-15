@@ -83,8 +83,10 @@ in
     nodejs-slim
     p7zip
     prettier
+    protonup-qt
     rust-analyzer
     rustup
+    steam
     tailscale
     typescript-language-server
     ventoy
@@ -117,6 +119,7 @@ in
     nano.enable = false;
     dconf.enable = true;
     zsh.enable = true;
+    steam.enable = true;
 
     neovim = {
       enable = true;
