@@ -26,7 +26,6 @@
       home-manager,
       plasma-manager,
       nix-index-database,
-
       ...
     }@inputs:
     let
