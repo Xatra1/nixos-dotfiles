@@ -73,8 +73,6 @@ let
     config.cudaSupport = true;
     config.rocmSupport = false; # needs to be explicitly disabled if cuda support is enabled?
   };
-
-  ffmpeg = pkgs.ffmpeg.override { config.cudaSupport = true; };
 in
 {
   nixpkgs = {
@@ -98,7 +96,7 @@ in
     easyeffects
     equibop
     fastfetch
-    ffmpeg
+    ffmpeg-full
     flatpak
     gcc
     gimp
