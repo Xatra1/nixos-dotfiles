@@ -57,8 +57,9 @@
           mv Tela-circle/22/{categories,emblems,panel} Tela-circle-dark/22
           mv Tela-circle/24/{animations,panel} Tela-circle-dark/24
 
-          rm Tela-circle-dark/32 Tela-circle-dark/scalable
-          rm Tela-circle-dark/32@2x Tela-circle-dark/scalable@2x
+          rm Tela-circle-dark/{32,scalable}
+          rm Tela-circle-dark/{32,scalable}@2x
+
           mv Tela-circle/32 Tela-circle-dark
           ln -sf 32 32@2x
           mv Tela-circle/scalable Tela-circle-dark/scalable
