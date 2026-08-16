@@ -24,13 +24,13 @@
     "icons/Tela-circle-dark".source = (
       stdenv.mkDerivation (finalAttrs: {
         name = "tela-circle";
-        version = "2026-07-07";
+        version = "0-unstable-2026-08-16";
 
         src = fetchFromGitHub {
           owner = "vinceliuice";
           repo = "Tela-circle-icon-theme";
-          rev = "${finalAttrs.version}";
-          hash = "sha256-0P4KLwrBPsLMaSdaq06dUe8E1qFoGLlMbWxZ89GebKE=";
+          rev = "ee3cf47bcb05c3d99a0860b54254d2ff3d1d2c69";
+          hash = "sha256-kvAJH/ptMvSCjk5Equi+8ZzHjSDKQUURUImNDZZXQcs=";
         };
 
         nativeBuildInputs = [ gtk3 ];
@@ -68,9 +68,6 @@
           # deal is
           rm Tela-circle-dark/symbolic/apps/xsi-addon-symbolic.svg
           rm Tela-circle-dark/scalable/apps/org.xfce.appfinder.svg
-
-          # https://github.com/vinceliuice/Tela-circle-icon-theme/issues/297
-          mv Tela-circle-dark/scalable/apps/org.vinegarhq.sober.svg Tela-circle-dark/scalable/apps/org.vinegarhq.Sober.svg
 
           mv Tela-circle-dark/* .
 
