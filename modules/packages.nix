@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  lib,
+  pkgs,
+  ...
+}:
 let
   electronArgs = [
     "--ozone-platform=wayland"
@@ -18,7 +22,18 @@ let
   miracode-nerd-font = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/miracode/package.nix";
     hash = "sha256-IrNPFv0w/kgxwrx1fWM+3UxBCWzFEGgGq8SIiuBtX1U=";
- }) { };
+  }) { };
+
+  spotify = pkgs.symlinkJoin {
+    name = "spotify";
+    paths = [ pkgs.spotify ];
+    buildInputs = [ pkgs.makeWrapper ];
+
+    postBuild = ''
+      wrapProgram $out/bin/spotify \
+        --add-flags "${lib.concatStringsSep " " electronArgs}"
+    '';
+  };
 
   ventoy_overlay = (
     self: super: {
@@ -86,6 +101,7 @@ in
     protonup-qt
     rust-analyzer
     rustup
+    spotify
     steam
     tailscale
     typescript-language-server
