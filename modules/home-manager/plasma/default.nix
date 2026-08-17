@@ -3,6 +3,7 @@
   imports = [
     ../../reused-strings.nix
     ./extra-config-files.nix
+    ./input.nix
     ./kate.nix
     ./panels.nix
     ./theme-fetch.nix
@@ -17,20 +18,6 @@
   programs.plasma = {
     enable = true;
     overrideConfig = true;
-
-    input = {
-      keyboard.options = [ "caps:none" ];
-
-      touchpads = [
-        {
-          name = "ETPS/2 Elantech Touchpad";
-          vendorId = "0002";
-          productId = "000e";
-          pointerSpeed = 0.3;
-        }
-      ];
-    };
-
     kscreenlocker.appearance.wallpaper = config.wallpaper;
 
     shortcuts = {
