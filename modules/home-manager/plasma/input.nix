@@ -4,10 +4,11 @@
 
      mice = [
       {
-        name = "PixArt Dell MS116 USB Optical Mouse";
-        vendorId = "413c";
-        productId = "301a";
-        acceleration = 0.4;
+        name = "2.4G Wireless Keyboard Mouse"; # how creative
+        vendorId = "3938";
+        productId = "1208";
+        acceleration = 0.3;
+        scrollSpeed = 1.5;
       }
     ];
 

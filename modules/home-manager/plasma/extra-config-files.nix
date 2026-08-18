@@ -7,6 +7,8 @@
       PreviewSize = 32;
     };
 
+    kcminputrc."Libinput/14648/4616/2.4G Wireless Keyboard Mouse".ScrollMethod = 4;
+
     kdeglobals = {
       KDE.DndBehavior = "MoveIfSameDevice";
 
