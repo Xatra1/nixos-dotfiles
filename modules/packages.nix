@@ -79,6 +79,7 @@ in
     flatpak
     gcc
     git
+    gimp
     gparted
     hyfetch
     ibus
