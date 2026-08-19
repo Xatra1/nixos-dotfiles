@@ -12,7 +12,7 @@
       [Desktop Entry]
       Type=Application
       Name=Equibop
-      Exec=${pkgs.equibop}/bin/equibop --start-minimized
+      Exec=${pkgs.equibop}/bin/equibop --enable-smooth-scrolling --enable-blink-features=MiddleClickAutoscroll --enable-gpu-rasterization --enable-features=VaapiVideoDecodeLinuxGL --start-minimized
     '';
 
     "autostart/steam.desktop".text = ''
