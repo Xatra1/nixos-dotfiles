@@ -1,6 +1,9 @@
 {
   programs.plasma = {
-    configFile.kcminputrc."Libinput/14648/4616/2.4G Wireless Keyboard Mouse".ScrollMethod = 4;
+    configFile.kcminputrc = {
+      "Libinput/14648/4616/2.4G Wireless Keyboard Mouse".ScrollMethod = 4;
+      "Libinput/2/14/ETPS\\/2 Elantech Touchpad".DisableEventsOnExternalMouse = true;
+    };
 
     input = {
       keyboard.options = [ "caps:none" ];
