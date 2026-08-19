@@ -47,6 +47,17 @@ let
     '';
   };
 
+  equibop = pkgs.symlinkJoin {
+    name = "equibop";
+    paths = [ pkgs.equibop ];
+    buildInputs = [ pkgs.makeWrapper ];
+
+    postBuild = ''
+      wrapProgram $out/bin/equibop \
+        --add-flags "${lib.concatStringsSep " " electronArgs}"
+    '';
+  };
+
   ventoy_overlay = (
     self: super: {
       ventoy = super.ventoy.overrideAttrs (
