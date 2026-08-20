@@ -141,6 +141,7 @@ in
     nixfmt
     nodejs-slim
     obs-studio
+    openrgb-with-all-plugins
     p7zip
     prettier
     protontricks

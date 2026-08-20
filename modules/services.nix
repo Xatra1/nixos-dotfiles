@@ -55,6 +55,11 @@
       port = 8080;
       secretKeyFile = "/home/solarfire/.local/share/nix-keys/secret";
     };
+
+    hardware.openrgb = {
+      enable = true;
+      package = pkgs.openrgb-with-all-plugins;
+    };
   };
 
   # Nix does not let you use integers on the left side of a binding without

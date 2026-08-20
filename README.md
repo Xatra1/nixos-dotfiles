@@ -140,5 +140,6 @@ nixos-dotfiles/                       # root
 
 # Won't Declaratively Configure
 - OBS Studio - config too big
+- OpenRGB - config too big
 - jellyfin-rpc - contains my jellyfin API key
 - iSponsorBlockTV - contains screen IDs used for casting to youtube. idk if those are private data or not and i don't care to find out
