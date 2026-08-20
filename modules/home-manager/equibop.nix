@@ -32,6 +32,7 @@ in
           trackSelf = true;
         };
 
+        ClearURLs.enabled = true;
         DisableCallIdle.enabled = true;
         DontRoundMyTimestamps.enabled = true;
 
