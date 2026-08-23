@@ -109,12 +109,15 @@
     };
   };
 
-  users.users = {
-    "sonarr".extraGroups = [ "media" ];
-    "radarr".extraGroups = [ "media" ];
+  users.groups.media.members = [
+    "jellyfin"
+    "sonarr"
+    "radarr"
+    "solarfire"
+  ];
 
+  users.users = {
     "jellyfin".extraGroups = [
-      "media"
       "video"
       "render"
     ];
