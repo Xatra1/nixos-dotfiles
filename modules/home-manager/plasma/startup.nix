@@ -15,6 +15,13 @@
       Exec=${pkgs.equibop}/bin/equibop --enable-smooth-scrolling --enable-blink-features=MiddleClickAutoscroll --enable-gpu-rasterization --enable-features=VaapiVideoDecodeLinuxGL --start-minimized
     '';
 
+    "autostart/openrgb.desktop".text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=OpenRGB
+      Exec=${pkgs.openrgb-with-all-plugins}/bin/openrgb --startminimized
+    '';
+
     "autostart/steam.desktop".text = ''
       [Desktop Entry]
       Type=Application
