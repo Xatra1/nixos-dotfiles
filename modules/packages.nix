@@ -102,7 +102,7 @@ in
     easyeffects
     equibop
     fastfetch
-    ffmpeg-full
+    ffmpeg_8-full
     flatpak
     gcc
     gimp
