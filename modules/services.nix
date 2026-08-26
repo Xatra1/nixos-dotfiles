@@ -1,0 +1,25 @@
+{ pkgs, ... }:
+{
+  services = {
+    displayManager.plasma-login-manager.enable = true;
+    desktopManager.plasma6.enable = true;
+    flatpak.enable = true;
+    tailscale.enable = true;
+    openssh.enable = true;
+    xserver.videoDrivers = [ "nvidia" ];
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
+    locate = with pkgs; {
+      enable = true;
+      package = plocate;
+    };
+  };
+
+  security.rtkit.enable = true;
+}
