@@ -50,10 +50,6 @@ gpg --list-secret-keys --keyid-format=long | head -n 4 | tail -n 1 | sed 's/ //g
 ```sh
 # assuming you're currently in the flake
 sudo nixos-rebuild switch -L --flake .#hostname
-# home-manager (if nh is installed use the command below)
-sudo home-manager switch -L --flake .#hostname
-# nh
-NH_FLAKE=. nh home switch --ask -L .#hostname
 ```
 
 **7. Generate unique SSH and GPG key pairs for the new host:**
