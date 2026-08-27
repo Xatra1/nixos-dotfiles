@@ -13,22 +13,22 @@ let
 
   ioquake3 = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ioquake3/package.nix";
-    hash = "sha256-c41yepb5CDUQOOJYgMIubUdpcjsiGypBHDe6N2QvvGk=";
+    hash = "sha256-nDr5NZH8JLKJonYbcqOG4wO/m3PE4qyeFw2o36H48DQ=";
   }) { };
 
   ironwail = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ironwail/package.nix";
-    hash = "sha256-HrAVFCCB5EFIMzL74lt6Nk0P4Ddbk23LyLCYP0TmHOw=";
+    hash = "sha256-gq3rqsbeSlvK81hAc/0xOb9I38MIrNwcLyz1rmabMcs=";
   }) { };
 
   kate-discord-rpc = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/kate-discord-rpc/package.nix";
-    hash = "sha256-tgg3tVrLMZq/SFKwvqASXC52RFv6InYIzFrhNO6t2o8=";
+    hash = "sha256-s/MgR88UxgmXZ7hieE9/ofYcKR04Ew/1QTXSdviCBgw=";
   }) { };
 
   miracode-nerd-font = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/miracode/package.nix";
-    hash = "sha256-IrNPFv0w/kgxwrx1fWM+3UxBCWzFEGgGq8SIiuBtX1U=";
+    hash = "sha256-WU+Vn9zP3zQpgJwPZEfwTazSDoB5Fp7HIqXtjmnfO4I=";
   }) { };
 
   spotify = pkgs.symlinkJoin {
