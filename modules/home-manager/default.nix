@@ -11,8 +11,6 @@
     ./zsh.nix
   ];
 
-  nixpkgs.config.allowUnfree = true; # "home-manager switch" wont work if this isnt also set here
-
   home = {
     username = "solarfire";
     homeDirectory = "/home/solarfire";

@@ -34,17 +34,20 @@
     {
       nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-        modules = [ ./modules/configuration.nix ];
-      };
-
-      homeConfigurations.solarfire = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs; };
-
         modules = [
-          ./modules/home-manager
-          plasma-manager.homeModules.plasma-manager
-          nix-index-database.homeModules.default
+          ./modules/configuration.nix
+          home-manager.nixosModules.home-manager
+
+          {
+            home-manager.useGlobalPkgs = true;
+
+            home-manager.sharedModules = [
+              plasma-manager.homeModules.plasma-manager
+              nix-index-database.homeModules.default
+            ];
+
+            home-manager.users.solarfire = import modules/home-manager;
+          }
         ];
       };
     };
