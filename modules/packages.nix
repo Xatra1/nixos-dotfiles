@@ -16,12 +16,12 @@ let
 
   ironwail = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ironwail/package.nix";
-    hash = "sha256-HrAVFCCB5EFIMzL74lt6Nk0P4Ddbk23LyLCYP0TmHOw=";
+    hash = "sha256-gq3rqsbeSlvK81hAc/0xOb9I38MIrNwcLyz1rmabMcs=";
   }) { };
 
   miracode-nerd-font = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/miracode/package.nix";
-    hash = "sha256-IrNPFv0w/kgxwrx1fWM+3UxBCWzFEGgGq8SIiuBtX1U=";
+    hash = "sha256-WU+Vn9zP3zQpgJwPZEfwTazSDoB5Fp7HIqXtjmnfO4I=";
   }) { };
 
   spotify = pkgs.symlinkJoin {
