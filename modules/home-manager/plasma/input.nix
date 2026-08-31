@@ -15,6 +15,7 @@
           productId = "1208";
           acceleration = 0.3;
           scrollSpeed = 1.5;
+          middleButtonEmulation = true;
         }
       ];
 
