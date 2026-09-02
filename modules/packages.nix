@@ -102,6 +102,7 @@ in
     protonup-qt
     rust-analyzer
     rustup
+    slint-lsp
     spotify
     steam
     tailscale

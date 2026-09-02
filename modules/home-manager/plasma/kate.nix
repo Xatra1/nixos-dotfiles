@@ -45,6 +45,11 @@
 
             "url": "https://github.com/microsoft/vscode/tree/main/extensions/json-language-features/server",
             "highlightingModeRegex": "^JSON$"
+          },
+
+          "Slint": {
+            "command": [ "slint-lsp" ],
+            "highlightingModeRegex": "Slint"
           }
         }
       }
