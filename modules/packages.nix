@@ -146,6 +146,7 @@ in
     rust-analyzer
     rustup
     satisfactorymodmanager
+    slint-lsp
     sof-firmware
     sonarr
     spotify
