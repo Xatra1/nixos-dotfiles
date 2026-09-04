@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  security.rtkit.enable = true;
+
   services = {
     displayManager.plasma-login-manager.enable = true;
     desktopManager.plasma6.enable = true;
@@ -20,6 +22,4 @@
       package = plocate;
     };
   };
-
-  security.rtkit.enable = true;
 }

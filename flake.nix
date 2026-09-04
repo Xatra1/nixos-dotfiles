@@ -35,21 +35,19 @@
       nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
+          (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
           ./modules/configuration.nix
           home-manager.nixosModules.home-manager
 
           {
             home-manager.useGlobalPkgs = true;
+            home-manager.users.solarfire = import modules/home-manager;
 
             home-manager.sharedModules = [
               plasma-manager.homeModules.plasma-manager
               nix-index-database.homeModules.default
             ];
-
-            home-manager.users.solarfire = import modules/home-manager;
           }
-
-          (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
         ];
       };
     };

@@ -14,13 +14,12 @@
   hardware = {
     enableRedistributableFirmware = true;
     cpu.intel.updateMicrocode = true;
+    bluetooth.enable = true;
 
     nvidia = {
       branch = "bleeding_edge";
       open = true;
       powerManagement.enable = true;
     };
-
-    bluetooth.enable = true;
   };
 }
