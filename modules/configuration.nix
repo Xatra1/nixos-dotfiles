@@ -44,31 +44,29 @@
     "solarfire" = {
       isNormalUser = true;
       description = "skrimmy mcbimmy";
+      shell = pkgs.zsh;
+      hashedPassword = "$y$j9T$CzrASqEyw1R3dmzdt/k4D1$ZvRgupEHnpzAkhYwL8smD3M1dbtAoMbnJLxCctadn.A";
 
       extraGroups = [
         "networkmanager"
         "wheel"
         "media"
       ];
-
-      shell = pkgs.zsh;
-      hashedPassword = "$y$j9T$CzrASqEyw1R3dmzdt/k4D1$ZvRgupEHnpzAkhYwL8smD3M1dbtAoMbnJLxCctadn.A";
     };
   };
 
   nix = {
     settings = {
       auto-optimise-store = true;
+      use-xdg-base-directories = true;
+      max-jobs = 1;
+      cores = 16;
+      warn-dirty = false;
 
       experimental-features = [
         "nix-command"
         "flakes"
       ];
-
-      use-xdg-base-directories = true;
-      max-jobs = 1;
-      cores = 16;
-      warn-dirty = false;
     };
   };
 

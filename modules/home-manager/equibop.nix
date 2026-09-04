@@ -25,23 +25,9 @@ in
         AlwaysTrust.enabled = true;
         BetterGifPicker.enabled = true;
         BetterUploadButton.enabled = true;
-
-        CallTimer = {
-          enabled = true;
-          format = "human";
-          trackSelf = true;
-        };
-
         ClearURLs.enabled = true;
         DisableCallIdle.enabled = true;
         DontRoundMyTimestamps.enabled = true;
-
-        FakeNitro = {
-          enabled = true;
-          useStickerHyperLinks = false;
-          useEmojiHyperLinks = false;
-        };
-
         FavoriteGifSearch.enabled = true;
         FixCodeblockGap.enabled = true;
         FixImagesQuality.enabled = true;
@@ -50,14 +36,33 @@ in
         MemberCount.enabled = true;
         MentionAvatars.enabled = true;
         MessageLatency.enabled = true;
+        NoF1.enabled = true;
+        PlatformIndicators.enabled = true;
+        RelationshipNotifier.enabled = true;
+        ReviewDB.enabled = true;
+        ShowMeYourName.enabled = true;
+        TenorGifSearch.enabled = true;
+        TypingTweaks.enabled = true;
+        WhoReacted.enabled = true;
+        YoutubeAdblock.enabled = true;
+
+        CallTimer = {
+          enabled = true;
+          format = "human";
+          trackSelf = true;
+        };
+
+        FakeNitro = {
+          enabled = true;
+          useStickerHyperLinks = false;
+          useEmojiHyperLinks = false;
+        };
 
         MessageLogger = {
           enabled = true;
           ignoreBots = true;
           ignoreSelf = true;
         };
-
-        NoF1.enabled = true;
 
         NewGuildSettings = {
           enabled = true;
@@ -66,28 +71,23 @@ in
           voiceChannels = true;
         };
 
-        PlatformIndicators.enabled = true;
-        RelationshipNotifier.enabled = true;
-        ReviewDB.enabled = true;
-
         ShikiCodeblocks = {
           enabled = true;
           theme = "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/tokyo-night.json";
         };
 
-        ShowMeYourName.enabled = true;
-        TenorGifSearch.enabled = true;
-        TypingTweaks.enabled = true;
-        WhoReacted.enabled = true;
-        YoutubeAdblock.enabled = true;
-
         # equicord
+        BlockKrisp.enabled = true;
+        MessageColors.enabled = true;
+        NoNitroUpsell.enabled = true;
+        CancelFriendRequest.enabled = true;
+        ShowSongName.enabled = true;
+        UnitConverter.enabled = true;
+
         AutoJumpToMessage = {
           enabled = true;
           onlyWhenUnfocused = true;
         };
-
-        BlockKrisp.enabled = true;
 
         Declutter = {
           enabled = true;
@@ -101,12 +101,6 @@ in
           removeLibraryAboveDms = true;
           removeFamilyCenterAboveDms = true;
         };
-
-        MessageColors.enabled = true;
-        NoNitroUpsell.enabled = true;
-        CancelFriendRequest.enabled = true;
-        ShowSongName.enabled = true;
-        UnitConverter.enabled = true;
       };
     };
   };

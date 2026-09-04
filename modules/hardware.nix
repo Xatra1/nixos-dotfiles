@@ -69,6 +69,7 @@
   hardware = {
     enableRedistributableFirmware = true;
     cpu.intel.updateMicrocode = true;
+    bluetooth.enable = true;
 
     nvidia = {
       branch = "bleeding_edge";
@@ -84,7 +85,5 @@
         intel-media-driver
       ];
     };
-
-    bluetooth.enable = true;
   };
 }

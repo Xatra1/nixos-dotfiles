@@ -81,16 +81,13 @@ let
   };
 in
 {
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-
-      permittedInsecurePackages = [
-        "ventoy-1.1.17"
-      ];
-    };
-
+  nixpkgs.config = {
+    allowUnfree = true;
     overlays = [ ventoy_overlay ];
+
+    permittedInsecurePackages = [
+      "ventoy-1.1.17"
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -169,14 +166,14 @@ in
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    sddm
-    khelpcenter
-    kwalletmanager
-    okular
-    qrca
     drkonqi
     elisa
+    khelpcenter
+    kwalletmanager
     kwin-x11
+    okular
+    qrca
+    sddm
   ];
 
   security = {

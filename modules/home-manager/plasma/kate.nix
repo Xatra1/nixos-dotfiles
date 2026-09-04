@@ -58,6 +58,9 @@
 
   programs = {
     plasma.configFile.katerc = {
+      project.restoreProjectsForSessions = true;
+      lspclient.ServerConfiguration = "file:///home/solarfire/.config/kate/lspclient/totally-not-settings.json"; # see above comment
+
       General = {
         "Startup Session" = "last";
         "Restore Window Configuration" = true;
@@ -68,9 +71,6 @@
         AutoSyncronizeMode = 1; # its spelled wrong in katerc lol
         KonsoleEscKeyBehaviour = false;
       };
-
-      project.restoreProjectsForSessions = true;
-      lspclient.ServerConfiguration = "file:///home/solarfire/.config/kate/lspclient/totally-not-settings.json"; # see above comment
     };
 
     kate = {
@@ -79,14 +79,13 @@
       editor = {
         tabWidth = 2;
         indent.replaceWithSpaces = true;
+        theme.name = "Tokyo Night";
+        brackets.automaticallyAddClosing = true;
 
         font = {
           family = "Miracode Nerd Font";
           pointSize = 9;
         };
-
-        theme.name = "Tokyo Night";
-        brackets.automaticallyAddClosing = true;
       };
     };
   };

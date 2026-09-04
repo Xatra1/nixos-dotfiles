@@ -3,12 +3,12 @@
     enable = true;
 
     settings = {
+      push.autoSetupRemote = true;
+
       user = {
         email = "xatra169@gmail.com";
         name = "solarfire";
       };
-
-      push.autoSetupRemote = true;
     };
 
     signing = {
