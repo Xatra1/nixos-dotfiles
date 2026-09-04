@@ -84,11 +84,6 @@ in
         ShowSongName.enabled = true;
         UnitConverter.enabled = true;
 
-        AutoJumpToMessage = {
-          enabled = true;
-          onlyWhenUnfocused = true;
-        };
-
         Declutter = {
           enabled = true;
           removeAvatarDecoration = false;
