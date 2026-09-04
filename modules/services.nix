@@ -4,7 +4,6 @@
     displayManager.plasma-login-manager.enable = true;
     desktopManager.plasma6.enable = true;
     flatpak.enable = true;
-    lact.enable = true;
     tailscale.enable = true;
     openssh.enable = true;
     sonarr.enable = true;
@@ -61,37 +60,6 @@
       package = pkgs.openrgb-with-all-plugins;
     };
   };
-
-  # Nix does not let you use integers on the left side of a binding without
-  # turning them into strings, so declaratively configuring a GPU fan curve
-  # using services.lact.settings is impossible in my case.
-  environment.etc."lact/config.yaml".text = ''
-    version: 6
-
-    daemon:
-      log_level: info
-      admin_group: wheel
-      disable_clocks_cleanup: false
-
-    gpus:
-      # NVIDIA GeForce RTX 3050
-      10DE:2584-1458:4169-0000:02:00.0:
-        fan_control_enabled: true
-
-        fan_control_settings:
-          mode: curve
-          static_speed: 0.5
-          temperature_key: edge
-          interval_ms: 500
-          curve:
-            40: 0.75
-            50: 0.8
-            60: 0.9
-            70: 1.0
-            80: 1.0
-          spindown_delay_ms: 5000
-          change_threshold: 2
-  '';
 
   security.rtkit.enable = true;
 
