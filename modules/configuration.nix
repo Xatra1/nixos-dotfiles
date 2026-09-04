@@ -52,6 +52,7 @@
       ];
 
       shell = pkgs.zsh;
+      hashedPassword = "$y$j9T$CzrASqEyw1R3dmzdt/k4D1$ZvRgupEHnpzAkhYwL8smD3M1dbtAoMbnJLxCctadn.A";
     };
   };
 
