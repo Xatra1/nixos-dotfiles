@@ -141,6 +141,7 @@ in
     prettier
     protontricks
     protonup-qt
+    puddletag
     qbittorrent
     radarr
     rust-analyzer
