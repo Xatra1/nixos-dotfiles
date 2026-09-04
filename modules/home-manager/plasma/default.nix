@@ -21,13 +21,13 @@
     kscreenlocker.appearance.wallpaper = config.wallpaper;
 
     shortcuts = {
+      "services/kitty.desktop"."_launch" = "Ctrl+Alt+T";
+      "services/org.kde.konsole.desktop"."_launch" = "None";
+
       kwin = {
         "Window Minimize" = "Alt+F9";
         "Window Maximize" = "Alt+F10";
       };
-
-      "services/kitty.desktop"."_launch" = "Ctrl+Alt+T";
-      "services/org.kde.konsole.desktop"."_launch" = "None";
     };
   };
 }

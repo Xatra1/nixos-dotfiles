@@ -44,31 +44,29 @@
     "solarfire" = {
       isNormalUser = true;
       description = "skrimmy mcbimmy";
+      shell = pkgs.zsh;
 
       extraGroups = [
         "networkmanager"
         "wheel"
       ];
-
-      shell = pkgs.zsh;
     };
   };
 
   nix = {
     settings = {
       auto-optimise-store = true;
-
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-
       use-xdg-base-directories = true;
       max-jobs = 1;
       cores = 4;
       warn-dirty = false;
       substituters = [ "http://lemon:8080?priority=100" ];
       trusted-public-keys = [ "lemon-1:HDAKLAuAFxJGPLnbnGBI9j9FDYqe04WeTlBWb3Z7UxE=" ];
+
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
 

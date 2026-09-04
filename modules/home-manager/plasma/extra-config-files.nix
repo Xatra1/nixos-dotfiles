@@ -1,6 +1,7 @@
 {
   programs.plasma.configFile = {
     baloofilerc."Basic Settings".Indexing-Enabled = false;
+    ksmserverrc.General.loginMode = "emptySession";
 
     dolphinrc.DetailsMode = {
       ExpandableFolders = false;
@@ -46,9 +47,10 @@
       windowsEnabled = false;
     };
 
-    ksmserverrc.General.loginMode = "emptySession";
-
     kwinrc = {
+      Effect-overview.BorderActivate = 9;
+      Wayland.EnablePrimarySelection = false;
+
       Desktops = {
         Number = 2;
         Rows = 1;
@@ -58,8 +60,6 @@
         BlurStrength = 7;
         NoiseStrength = 0;
       };
-
-      Effect-overview.BorderActivate = 9;
 
       Plugins = {
         blurEnabled = false;
@@ -75,8 +75,6 @@
         MultiScreenMode = 1;
         OrderMinimizedMode = 1;
       };
-
-      Wayland.EnablePrimarySelection = false;
     };
   };
 }

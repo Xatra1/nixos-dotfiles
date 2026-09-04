@@ -120,14 +120,14 @@ in
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    sddm
-    khelpcenter
-    kwalletmanager
-    okular
-    qrca
     drkonqi
     elisa
+    khelpcenter
+    kwalletmanager
     kwin-x11
+    okular
+    qrca
+    sddm
   ];
 
   security.polkit.enablePkexecWrapper = true; # needed for gparted to run
