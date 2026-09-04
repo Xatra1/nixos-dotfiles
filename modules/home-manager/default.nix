@@ -2,7 +2,6 @@
   imports = [
     ./plasma
     ./btop.nix
-    ./equibop.nix
     ./fastfetch.nix
     ./hyfetch.nix
     ./kitty.nix
