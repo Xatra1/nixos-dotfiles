@@ -6,6 +6,7 @@
     ./equibop.nix
     ./fastfetch.nix
     ./git.nix
+    ./headset-battery-indicator.nix
     ./hyfetch.nix
     ./kitty.nix
     ./mpv.nix

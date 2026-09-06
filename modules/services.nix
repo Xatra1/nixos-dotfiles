@@ -9,6 +9,7 @@
     sonarr.enable = true;
     radarr.enable = true;
     xserver.videoDrivers = [ "nvidia" ];
+    udev.packages = [ pkgs.headsetcontrol ];
 
     pipewire = {
       enable = true;

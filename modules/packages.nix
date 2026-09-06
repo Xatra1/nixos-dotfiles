@@ -11,6 +11,11 @@ let
     "--enable-features=VaapiVideoDecodeLinuxGL"
   ];
 
+  headset-battery-indicator = pkgs.callPackage (pkgs.fetchurl {
+    url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/headset-battery-indicator/package.nix";
+    hash = "sha256-z8zGKBhr8czdDvuXwWteKrdDrehcBXM5Sleu8g3XWAg=";
+  }) { };
+
   ioquake3 = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ioquake3/package.nix";
     hash = "sha256-nDr5NZH8JLKJonYbcqOG4wO/m3PE4qyeFw2o36H48DQ=";
@@ -105,6 +110,7 @@ in
     gimp
     git
     gparted
+    headset-battery-indicator
     headsetcontrol
     hyfetch
     ibus
