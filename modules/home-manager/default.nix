@@ -9,6 +9,7 @@
     ./hyfetch.nix
     ./kitty.nix
     ./mpv.nix
+    ./retroarch.nix
     ./ssh.nix
     ./xdg-base-dir.nix
     ./zsh.nix

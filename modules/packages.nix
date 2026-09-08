@@ -146,6 +146,7 @@ in
     puddletag
     qbittorrent
     radarr
+    retroarch
     rust-analyzer
     rustup
     satisfactorymodmanager

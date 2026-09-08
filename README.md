@@ -105,7 +105,7 @@ nixos-dotfiles/                       # root
 ├─ modules/                             # nix modules
 │   ├─ home-manager/                      # home-manager and plasma-manager modules
 │   │  ├─ plasma/                           # plasma-manager modules
-│   │  │  ├─ default.nix                    # imports plasma-manager modules, enables the config and contains configs too short to be separated
+│   │  │  ├─ default.nix                    # imports plasma-manager modules, enables the config and contains configs too short to be separatedc
 │   │  │  ├─ extra-config-files.nix         # anything in my config that couldn't be handled by a high-level module gets modified directly
 │   │  │  ├─ kate.nix                       # configuration for the text editor Kate
 │   │  │  ├─ panels.nix                     # a unique top panel for both of my displays and a bottom panel containg pinned icons
@@ -121,6 +121,7 @@ nixos-dotfiles/                       # root
 │   │  ├─ hyfetch.nix                     # hyfetch because im gay
 │   │  ├─ kitty.nix                       # kitty is the best terminal Ever
 │   │  ├─ mpv.nix                         # i barely use mpv idk why i made its config declarative
+│   │  ├─ retroarch.nix                   # Enabled cores, general settings, SwanStation core config, and remap files
 │   │  ├─ ssh.nix                         # ssh identity configs
 │   │  ├─ xdg-base-dirs.nix               # environment variables to force programs to conform to the xdg base dir spec
 │   │  └─ zsh.nix                         # very extensive zsh config that pulls in some plugins and my custom theme
