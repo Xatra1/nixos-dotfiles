@@ -29,8 +29,8 @@
 
     settings = {
       discord_allow = "true";
-      gamemode_enable = "true";
       fastforward_ratio = "5.000000";
+      gamemode_enable = "true";
       input_rewind_btn = "11";
       input_toggle_fast_forward_btn = "12";
       menu_driver = "xmb";
@@ -39,6 +39,8 @@
       menu_xmb_animation_move_up_down = "1";
       menu_xmb_animation_opening_main_menu = "1";
       rewind_enable = "true";
+      rgui_browser_directory = "~/.local/share/Games"; # i'm not sure why the option specifies rgui, this applies to all menu drivers
+      show_hidden_files = "true";
       video_fullscreen = "true";
       video_refresh_rate = "240.000000";
       vrr_runloop_enable = "true";
