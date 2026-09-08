@@ -30,7 +30,7 @@
     settings = {
       discord_allow = "true";
       gamemode_enable = "true";
-      fastforwrad_ratio = "5.000000";
+      fastforward_ratio = "5.000000";
       input_rewind_btn = "11";
       input_toggle_fast_forward_btn = "12";
       menu_driver = "xmb";
