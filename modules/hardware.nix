@@ -64,12 +64,23 @@
     { device = "/dev/disk/by-uuid/0c268b87-ba9a-4175-8618-59b6176a99e7"; }
   ];
 
-  services.udev.extraRules = "ACTION==\"add|change\", KERNEL==\"sd[a-z]*\", ATTR{queue/rotational}==\"1\", ATTR{queue/scheduler}=\"bfq\"";
+  services.udev.extraRules = ''
+    ACTION=="add|change", KERNEL=="sd[a-z]*", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
+
+    # Gaomon S620
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006d", MODE="0666"
+    SUBSYSTEM=="hidraw", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006f", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006d", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006f", MODE="0666"
+    SUBSYSTEM=="input", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006d", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+    SUBSYSTEM=="input", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006f", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+  '';
 
   hardware = {
     enableRedistributableFirmware = true;
     cpu.intel.updateMicrocode = true;
     bluetooth.enable = true;
+    opentabletdriver.enable = true;
 
     nvidia = {
       branch = "bleeding_edge";
