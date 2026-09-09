@@ -127,6 +127,7 @@ in
     kdePackages.markdownpart
     kdePackages.plasma-login-manager
     kitty
+    krita
     marksman
     mediainfo
     mkvtoolnix
