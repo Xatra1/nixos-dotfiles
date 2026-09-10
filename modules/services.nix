@@ -110,16 +110,47 @@
   virtualisation.oci-containers = {
     backend = "docker";
 
-    containers."iSponsorBlockTV" = {
-      image = "ghcr.io/dmunozv04/isponsorblocktv";
+    containers = {
+      "windows" = {
+        image = "dockurr/windows";
+        autoStart = false;
+        volumes = [ "/home/solarfire/Documents/Docker/windows:/storage" ];
 
-      volumes = [
-        "/home/solarfire/Documents/Docker/iSponsorBlockTV:/app/data"
-      ];
+        capabilities = {
+          NET_ADMIN = true;
+        };
 
-      extraOptions = [
-        "--network=host"
-      ];
+        devices = [
+          "/dev/kvm"
+          "/dev/net/tun"
+        ];
+
+        environment = {
+          "VERSION" = "11";
+          "DISK_SIZE" = "256GB";
+          "CPU_CORES" = "8";
+          "RAM_SIZE" = "16GB";
+        };
+
+        ports = [
+          "8006:8006"
+          "3389:3389/tcp"
+          "3389:3389/udp"
+        ];
+      };
+
+      "iSponsorBlockTV" = {
+        image = "ghcr.io/dmunozv04/isponsorblocktv";
+
+        volumes = [
+          "/home/solarfire/Documents/Docker/iSponsorBlockTV:/app/data"
+          "/home/solarfire/Documents/Projects:/shared"
+        ];
+
+        extraOptions = [
+          "--network=host"
+        ];
+      };
     };
   };
 }
