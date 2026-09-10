@@ -63,7 +63,7 @@
       };
 
       Konsole = {
-        AutoSyncronizeMode = 1; # its spelled wrong in katerc lol
+        AutoSyncronizeMode = 0; # its spelled wrong in katerc lol
         KonsoleEscKeyBehaviour = false;
       };
     };
