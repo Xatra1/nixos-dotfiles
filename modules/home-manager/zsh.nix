@@ -135,6 +135,10 @@ in
       compinit -C
     '';
 
+    sessionVariables = {
+      HISTCONTROL = "ignoreboth:erasedups"; # for nix-shell
+    };
+
     initContent = lib.mkOrder 1500 ''
       [[ "$TERM" = "linux" ]] && clear
 
