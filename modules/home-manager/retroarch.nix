@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   xdg.configFile."retroarch/config/SwanStation/SwanStation.opt".text = ''
     swanstation_BIOS_PathNTSCU = "openbios.bin"
@@ -47,6 +48,12 @@
       xmb_menu_color_theme = "21";
       xmb_switch_icons = "true";
       xmb_theme = "5";
+
+      # automatically updates paths to follow changes to the Nix store
+      assets_directory = "${pkgs.retroarch-assets}/share/retroarch/assets";
+      joypad_autoconfig_dir = "${pkgs.retroarch-joypad-autoconfig}/share/libretro/autoconfig";
+      libretro_directory = "${pkgs.retroarch}/lib/retroarch/cores";
+      libretro_info_path = "${pkgs.libretro-core-info}/share/retroarch/cores";
     };
   };
 }
