@@ -13,7 +13,7 @@ let
 
   ioquake3 = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ioquake3/package.nix";
-    hash = "sha256-nDr5NZH8JLKJonYbcqOG4wO/m3PE4qyeFw2o36H48DQ=";
+    hash = "sha256-CAs+HIteMMYlZmCsoowzTdm3fv2PA/GfKgPFlxcHdcI=";
   }) { };
 
   ioquake3_overlay = (
