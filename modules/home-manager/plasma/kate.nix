@@ -72,7 +72,7 @@
       enable = true;
 
       editor = {
-        tabWidth = 2;
+        tabWidth = 4;
         indent.replaceWithSpaces = true;
         theme.name = "Tokyo Night";
         brackets.automaticallyAddClosing = true;
