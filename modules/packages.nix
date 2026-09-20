@@ -142,6 +142,7 @@ in
     openrgb-with-all-plugins
     p7zip
     prettier
+    prismlauncher
     protontricks
     protonup-qt
     puddletag

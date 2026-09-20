@@ -167,6 +167,7 @@
               "preferred://browser"
               "preferred://filemanager"
               "applications:kitty.desktop"
+              "applications:org.prismlauncher.PrismLauncher.desktop"
               "applications:equibop.desktop"
               "applications:spotify.desktop"
               "applications:steam.desktop"
