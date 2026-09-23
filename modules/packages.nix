@@ -1,16 +1,5 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, ... }:
 let
-  electronArgs = [
-    "--enable-smooth-scrolling"
-    "--enable-blink-features=MiddleClickAutoscroll"
-    "--enable-gpu-rasterization"
-    "--enable-features=VaapiVideoDecodeLinuxGL"
-  ];
-
   ioquake3 = pkgs.callPackage (pkgs.fetchurl {
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ioquake3/package.nix";
     hash = "sha256-CAs+HIteMMYlZmCsoowzTdm3fv2PA/GfKgPFlxcHdcI=";
@@ -45,17 +34,6 @@ let
     url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/miracode/package.nix";
     hash = "sha256-WU+Vn9zP3zQpgJwPZEfwTazSDoB5Fp7HIqXtjmnfO4I=";
   }) { };
-
-  spotify = pkgs.symlinkJoin {
-    name = "spotify";
-    paths = [ pkgs.spotify ];
-    buildInputs = [ pkgs.makeWrapper ];
-
-    postBuild = ''
-      wrapProgram $out/bin/spotify \
-        --add-flags "${lib.concatStringsSep " " electronArgs}"
-    '';
-  };
 
   ventoy_overlay = (
     self: super: {
@@ -129,7 +107,6 @@ in
     protontricks
     protonup-qt
     satisfactorymodmanager
-    spotify
     steam
     tailscale
     ventoy
