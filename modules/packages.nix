@@ -125,6 +125,7 @@ in
     nil
     nixfmt
     obs-studio
+    prismlauncher
     protontricks
     protonup-qt
     satisfactorymodmanager
