@@ -37,6 +37,10 @@
         root /var/www/data
       '';
 
+      virtualHosts."minecraft.solarfire164.xyz".extraConfig = ''
+        reverse_proxy :25565
+      '';
+
       virtualHosts."jellyfin.solarfire164.xyz".extraConfig = ''
         reverse_proxy :8096
       '';
@@ -96,6 +100,7 @@
     80
     443
     8080
+    25565
   ];
 
   networking.firewall.allowedUDPPorts = [
