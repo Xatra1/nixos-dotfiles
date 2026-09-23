@@ -101,7 +101,6 @@ in
     btop
     caddy
     docker
-    easyeffects
     equibop
     fastfetch
     ffmpeg_8-full

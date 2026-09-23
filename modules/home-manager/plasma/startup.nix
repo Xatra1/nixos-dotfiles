@@ -7,13 +7,6 @@ let
 in
 {
   xdg.configFile = {
-    "autostart/easyeffects.desktop".text = ''
-      [Desktop Entry]
-      Type=Application
-      Name=Easy Effects
-      Exec=${pkgs.easyeffects}/bin/easyeffects --hide-window --service-mode
-    '';
-
     "autostart/equibop.desktop".text = ''
       [Desktop Entry]
       Type=Application
