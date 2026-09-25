@@ -3,7 +3,6 @@
   imports = [
     ./hardware.nix
     ./packages.nix
-    ./plasma-overlay.nix
     ./services.nix
   ];
 
@@ -68,6 +67,17 @@
         "flakes"
       ];
     };
+  };
+
+  environment.laminix = {
+    enable = true;
+    plasma = "full";
+
+    packages = [
+      "obs-studio"
+      "prismlauncher"
+      "qbittorrent"
+    ];
   };
 
   nixpkgs.hostPlatform = "x86_64-linux";

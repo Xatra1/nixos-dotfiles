@@ -7,6 +7,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    laminix = {
+      url = "github:jackboykin/laminix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,6 +31,7 @@
       home-manager,
       plasma-manager,
       nix-index-database,
+      laminix,
       ...
     }@inputs:
     let
@@ -36,6 +42,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./modules/configuration.nix
+          laminix.nixosModules.default
           home-manager.nixosModules.home-manager
 
           {
