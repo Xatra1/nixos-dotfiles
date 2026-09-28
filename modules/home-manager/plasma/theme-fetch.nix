@@ -3,7 +3,7 @@
   xdg.dataFile = with pkgs; {
     "color-schemes/TokyoNight.colors".source = fetchurl {
       url = "https://raw.githubusercontent.com/Jayy-Dev/Plasma-Tokyo-Night/refs/heads/plasma-6/colorscheme/TokyoNight.colors";
-      hash = "sha256-Qm6TY+5MCDIvvSkBn0iiLFL+ni4pMcokAJOtc2URelw=";
+      hash = "sha256-Qgt/AQfmfTGhpf0vWJXxQzQ/BWW216GUzpnaoFXd0CA=";
     };
 
     "plasma/desktoptheme/Amethyst/".source = fetchFromGitHub {
