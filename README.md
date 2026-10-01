@@ -132,7 +132,7 @@ nixos-dotfiles/                       # root
 │   ├─ reused-strings.nix               # any generic string that gets used more than once throughout my config is probably defined here
 │   └─ services.nix                     # systemd services and their related configs
 ├─ flake.lock                         # input version pinning
-└─ flake.nix                          # contains nixpkgs, home-manager, nix-index-database, and plasma-manager inputs
+└─ flake.nix                          # contains nixpkgs, home-manager, laminix, nix-index-database, and plasma-manager inputs
 ```
 
 # Won't Declaratively Configure
