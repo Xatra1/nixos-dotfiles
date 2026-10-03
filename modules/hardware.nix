@@ -58,6 +58,12 @@
       fsType = "btrfs";
       options = [ "compress=zstd:9" ];
     };
+
+    "/media/steam-library" = {
+      device = "/dev/disk/by-uuid/1ce2aa05-c76c-40fa-8393-2a07fd8daa60";
+      fsType = "btrfs";
+      options = [ "compress=zstd:9" ];
+    };
   };
 
   swapDevices = [
