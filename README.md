@@ -105,7 +105,7 @@ nixos-dotfiles/                       # root
 ├─ modules/                             # nix modules
 │   ├─ home-manager/                      # home-manager and plasma-manager modules
 │   │  ├─ plasma/                           # plasma-manager modules
-│   │  │  ├─ default.nix                    # imports plasma-manager modules, enables the config and contains configs too short to be separatedc
+│   │  │  ├─ default.nix                    # imports plasma-manager modules, enables the config and contains configs too short to be separated
 │   │  │  ├─ extra-config-files.nix         # anything in my config that couldn't be handled by a high-level module gets modified directly
 │   │  │  ├─ kate.nix                       # configuration for the text editor Kate
 │   │  │  ├─ panels.nix                     # a unique top panel for both of my displays and a bottom panel containg pinned icons
