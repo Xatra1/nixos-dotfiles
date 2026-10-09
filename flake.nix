@@ -38,12 +38,29 @@
       hostname = "lemon";
     in
     {
+      overlays.ventoy = final: prev: {
+        ventoy = prev.ventoy.overrideAttrs (
+          final: prev: {
+            version = "1.1.18";
+
+            src = builtins.fetchurl {
+              url = "https://github.com/ventoy/Ventoy/releases/download/v${final.version}/ventoy-${final.version}-linux.tar.gz";
+              sha256 = "sha256-2G/53mPZTIuPH2sU0jxVr0uI6CB78ok4kIkqapexrVQ=";
+            };
+          }
+        );
+      };
+
       nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./modules/configuration.nix
           laminix.nixosModules.default
           home-manager.nixosModules.home-manager
+
+          {
+            nixpkgs.overlays = [ self.overlays.ventoy ];
+          }
 
           {
             home-manager.useGlobalPkgs = true;
