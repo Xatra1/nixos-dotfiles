@@ -71,7 +71,7 @@
   ];
 
   services.udev.extraRules = ''
-    ACTION=="add|change", KERNEL=="sd[a-z]*", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
+    ACTION=="add|change", KERNEL=="sda*", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
 
     # Gaomon S620
     SUBSYSTEM=="hidraw", ATTRS{idVendor}=="256c", ATTRS{idProduct}=="006d", MODE="0666"
