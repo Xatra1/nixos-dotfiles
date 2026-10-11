@@ -1,8 +1,9 @@
 # Hosts
-| Name         | Description                                                          | CPU                 | GPU                                          | RAM                      | Storage              |
-|--------------|----------------------------------------------------------------------|---------------------|----------------------------------------------|--------------------------|----------------------|
-| `lemon`      | Main desktop. Also used as a "server" for file hosting and Jellyfin. | Intel Core i7-11700 | Integrated UHD 750 + NVIDIA GeForce RTX 3050 | 32GB DDR4-2666           | 500GB NVMe + 4TB HDD |
-| `strawberry` | Laptop for college. Was given it to replace clementine.              | AMD A12-9700P       | Integrated Radeon R7                         | 8GB DDR4 (unknown speed) | 256GB SSD            |
+| Name         | Description                                                          | CPU                 | GPU                                          | RAM                      | Storage                          |
+|--------------|----------------------------------------------------------------------|---------------------|----------------------------------------------|--------------------------|----------------------------------|
+| `lemon`      | Main desktop. Also used as a "server" for file hosting and Jellyfin. | Intel Core i7-11700 | Integrated UHD 750 + NVIDIA GeForce RTX 3050 | 32GB DDR4-2666           | 500GB NVMe + 4TB HDD + 256GB SSD |
+| `strawberry` | Laptop for college. Was given it to replace clementine.              | AMD A12-9700P       | Integrated Radeon R7                         | 8GB DDR4 (unknown speed) | 128GB SSD                        |
+
 
 
 # Discontinued Hosts
