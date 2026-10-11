@@ -43,6 +43,7 @@
               "org.kde.plasma.brightness"
               "org.kde.plasma.mediacontroller"
               "org.kde.plasma.devicenotifier"
+              "org.kde.merkuro.contact.applet"
             ];
           };
         }
@@ -134,6 +135,7 @@
             "org.kde.plasma.brightness"
             "org.kde.plasma.mediacontroller"
             "org.kde.plasma.devicenotifier"
+            "org.kde.merkuro.contact.applet"
           ];
         }
       ];
