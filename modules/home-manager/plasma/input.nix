@@ -1,7 +1,7 @@
 {
   programs.plasma = {
     configFile.kcminputrc = {
-      "Libinput/14648/4616/2.4G Wireless Keyboard Mouse".ScrollMethod = 4;
+      "Libinput/Libinput/16700/12314/PixArt Dell MS116 USB Optical Mouse".ScrollMethod = 4;
       "Libinput/2/14/ETPS\\/2 Elantech Touchpad".DisableEventsOnExternalMouse = true;
     };
 
@@ -10,9 +10,9 @@
 
       mice = [
         {
-          name = "2.4G Wireless Keyboard Mouse"; # how creative
-          vendorId = "3938";
-          productId = "1208";
+          name = "PixArt Dell MS116 USB Optical Mouse";
+          vendorId = "413C";
+          productId = "301A";
           acceleration = 0.3;
           scrollSpeed = 1.5;
           middleButtonEmulation = true;
