@@ -74,6 +74,7 @@ in
     bat
     btop
     caddy
+    comma
     docker
     equibop
     fastfetch
