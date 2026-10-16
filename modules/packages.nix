@@ -121,6 +121,7 @@ in
     drkonqi
     elisa
     khelpcenter
+    kmail-account-wizard
     kwalletmanager
     kwin-x11
     okular
@@ -135,6 +136,7 @@ in
     dconf.enable = true;
     zsh.enable = true;
     steam.enable = true;
+    kde-pim.enable = false; # i LOVE when programs show up announced !!
 
     neovim = {
       enable = true;
