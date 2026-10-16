@@ -108,7 +108,6 @@ in
     mpv
     neovim
     nh
-    nicotine-plus
     nil
     nix-serve
     nixfmt
@@ -127,6 +126,7 @@ in
     satisfactorymodmanager
     sof-firmware
     sonarr
+    slskd
     spotify
     steam
     tailscale

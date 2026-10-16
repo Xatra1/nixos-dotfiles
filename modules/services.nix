@@ -64,6 +64,21 @@
       enable = true;
       package = pkgs.openrgb-with-all-plugins;
     };
+
+    slskd = {
+      enable = true;
+      environmentFile = "/home/solarfire/.config/slskd/env";
+
+      settings = {
+        soulseek.listen_port = 25565;
+
+        shares.directories = [
+          "/media/Downloads/"
+          "/media/Movies"
+          "/media/Shows"
+        ];
+      };
+    };
   };
 
   security.rtkit.enable = true;
@@ -86,6 +101,7 @@
     "jellyfin"
     "sonarr"
     "radarr"
+    "slskd"
     "solarfire"
   ];
 
