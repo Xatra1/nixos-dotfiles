@@ -121,22 +121,33 @@ in
     drkonqi
     elisa
     khelpcenter
-    kmail-account-wizard
     kwalletmanager
-    kwin-x11
     okular
     qrca
     sddm
   ];
 
-  security.polkit.enablePkexecWrapper = true; # needed for gparted to run
+  security = {
+    polkit.enablePkexecWrapper = true; # needed for gparted to run
+
+    wrappers.btop = {
+      source = "${pkgs.btop}/bin/btop";
+      capabilities = "cap_perfmon+ep";
+      owner = "root";
+      group = "root";
+    };
+  };
+
+  systemd.tmpfiles.rules = [
+    "Z /sys/class/powercap/intel-rapl:0/energy_uj 0444 root root - -"
+  ];
 
   programs = {
     nano.enable = false;
+    kde-pim.enable = false; # i LOVE when programs show up unannounced!!
     dconf.enable = true;
     zsh.enable = true;
     steam.enable = true;
-    kde-pim.enable = false; # i LOVE when programs show up announced !!
 
     neovim = {
       enable = true;
