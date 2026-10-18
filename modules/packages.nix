@@ -150,9 +150,7 @@ in
     drkonqi
     elisa
     khelpcenter
-    kmail-account-wizard
     kwalletmanager
-    kwin-x11
     okular
     qrca
     sddm
@@ -162,7 +160,7 @@ in
     polkit.enablePkexecWrapper = true; # needed for gparted to run
 
     wrappers.btop = {
-      source = "/run/current-system/sw/bin/btop";
+      source = "${pkgs.btop}/bin/btop";
       capabilities = "cap_perfmon+ep";
       owner = "root";
       group = "root";
@@ -175,10 +173,10 @@ in
 
   programs = {
     nano.enable = false;
+    kde-pim.enable = false; # i LOVE when programs show up unannounced!!
     dconf.enable = true;
     zsh.enable = true;
     steam.enable = true;
-    kde-pim.enable = false; # i LOVE when programs show up announced !!
 
     neovim = {
       enable = true;
