@@ -1,9 +1,13 @@
-{ lib, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 {
   options = {
     wallpaper = lib.mkOption {
       type = lib.types.str;
-      default = "/home/solarfire/Pictures/Wallpapers/89.png";
+      default = "${pkgs.kdePackages.breeze}/share/wallpapers/Next/contents/images_dark/7680x2160.png";
       description = "Absolute path to an image.";
     };
 
