@@ -78,15 +78,15 @@
       })
     );
 
-    "icons/Oxygen 14 Matrix Green".source = (
+    "icons/Oxygen 20 Peach Fruit".source = (
       stdenv.mkDerivation (finalAttrs: {
-        themeName = "midnight_meadow";
+        themeName = "peach";
         name = "oxygen-cursor-${finalAttrs.themeName}";
-        version = "6.6.0";
+        version = "6.8.0";
 
         src = fetchurl {
           url = "https://download.kde.org/stable/plasma/${finalAttrs.version}/oxygen-${finalAttrs.version}.tar.xz";
-          hash = "sha256-e797nKufLTJTgrd30b2BoVNAfHTfFhCiPpG0qgyvFaM=";
+          hash = "sha256-43MCpyGc+t/bRir1mSrrB/0wrjlqXMbpqPGg4K4mgTY=";
         };
 
         nativeBuildInputs = [
@@ -109,7 +109,7 @@
           mv oxy-${finalAttrs.themeName} $out
 
           echo "[Icon Theme]
-          Name = Oxygen Matrix Green
+          Name = Oxygen Peach Fruit
           Comment = Oxygen mouse theme. Oxygenize your desktop!" > $out/index.theme
 
           rm -r $out/{config,cursors_scalable,png,svg}
