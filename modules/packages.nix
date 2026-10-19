@@ -108,6 +108,7 @@ in
     mpv
     neovim
     nh
+    nicotine-plus
     nil
     nix-serve
     nixfmt
