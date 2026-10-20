@@ -57,6 +57,9 @@ in
       dir = "dir -lshA --color=auto";
       cat = "bat";
       fastfetch = "hyfetch";
+      # since I updated my lockfile on 2026-10-17, btop has not been able to
+      # find this library, so I use this as a workaround.
+      btop = "LD_PRELOAD=/run/opengl-driver/lib/libnvidia-ml.so.1 btop";
     };
 
     dotDir = "/home/solarfire/.config/zsh";
