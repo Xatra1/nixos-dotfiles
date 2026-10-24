@@ -135,7 +135,7 @@ in
     ventoy
     vscode-langservers-extracted
     wget
-    wine
+    wineWow64Packages.staging
     wl-clipboard
     x264
     xclicker
