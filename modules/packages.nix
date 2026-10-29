@@ -91,7 +91,6 @@ in
     ioquake3
     ironwail
     jellyfin
-    jellyfin-rpc
     jellyfin-web
     jq
     kate-discord-rpc

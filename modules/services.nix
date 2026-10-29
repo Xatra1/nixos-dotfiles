@@ -83,20 +83,6 @@
 
   security.rtkit.enable = true;
 
-  systemd.user.services.jellyfin-rpc = {
-    enable = true;
-    unitConfig.ConditionUser = "solarfire";
-    after = [ "network.target" ];
-    wantedBy = [ "default.target" ];
-    description = "Start Jellyfin-RPC";
-
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.jellyfin-rpc}/bin/jellyfin-rpc";
-      ExecStartPre = "/usr/bin/env sleep 5";
-    };
-  };
-
   users.groups.media.members = [
     "jellyfin"
     "sonarr"
