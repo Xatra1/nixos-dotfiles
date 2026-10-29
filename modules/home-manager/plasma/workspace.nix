@@ -5,7 +5,7 @@
   programs.plasma.workspace = {
     enableMiddleClickPaste = false;
     theme = "Amethyst";
-    colorScheme = "TokyoNight";
+    colorScheme = "Amethyst";
     iconTheme = "Tela-circle-dark";
     wallpaper = config.wallpaper;
     cursor.theme = "Oxygen 14 Matrix Green";

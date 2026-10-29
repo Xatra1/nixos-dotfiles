@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
   xdg.dataFile = with pkgs; {
-    "color-schemes/TokyoNight.colors".source = fetchurl {
-      url = "https://raw.githubusercontent.com/Jayy-Dev/Plasma-Tokyo-Night/refs/heads/plasma-6/colorscheme/TokyoNight.colors";
-      hash = "sha256-Qm6TY+5MCDIvvSkBn0iiLFL+ni4pMcokAJOtc2URelw=";
+    "color-schemes/Amethyst.colors".source = fetchurl {
+      url = "https://raw.githubusercontent.com/ddh4r4m/Amethyst/refs/heads/main/color-schemes/Amethyst.colors";
+      hash = "sha256-Uu9K9LZ+/175QJSheYChdVExjZ5gV2IdGesOjhinnzs=";
     };
 
     "plasma/desktoptheme/Amethyst/".source = fetchFromGitHub {

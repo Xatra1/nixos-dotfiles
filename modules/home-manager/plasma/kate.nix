@@ -79,7 +79,7 @@
       editor = {
         tabWidth = 4;
         indent.replaceWithSpaces = true;
-        theme.name = "Tokyo Night";
+        theme.name = "Dracula";
         brackets.automaticallyAddClosing = true;
 
         font = {
