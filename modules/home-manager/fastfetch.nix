@@ -41,6 +41,8 @@
           key = "Days since install";
           text = "echo $(( ($(date +%s) - $(date +%s -ud $(stat / | head -n 8 | tail -n 1 | awk '{print $2}'))) / 3600 / 24 ))";
         }
+
+        "colors"
       ];
     };
   };
