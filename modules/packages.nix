@@ -70,6 +70,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    # keep-sorted start
     android-tools
     bat
     btop
@@ -99,6 +100,7 @@ in
     kdePackages.kcolorchooser
     kdePackages.markdownpart
     kdePackages.plasma-login-manager
+    keep-sorted
     kitty
     krita
     marksman
@@ -124,9 +126,9 @@ in
     radarr
     retroarch
     satisfactorymodmanager
+    slskd
     sof-firmware
     sonarr
-    slskd
     spotify
     steam
     tailscale
@@ -139,6 +141,7 @@ in
     x264
     xclicker
     zsh
+    # keep-sorted end
   ];
 
   fonts.packages = with pkgs; [
@@ -147,6 +150,7 @@ in
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    # keep-sorted start
     drkonqi
     elisa
     khelpcenter
@@ -154,6 +158,7 @@ in
     okular
     qrca
     sddm
+    # keep-sorted end
   ];
 
   security.polkit.enablePkexecWrapper = true; # needed for gparted to run
