@@ -73,9 +73,10 @@
         soulseek.listen_port = 25565;
 
         shares.directories = [
-          "/media/Downloads/"
+          "/media/Downloads"
           "/media/Movies"
           "/media/Shows"
+          "/media/Music"
         ];
       };
     };
