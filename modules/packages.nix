@@ -98,6 +98,7 @@ in
     kdePackages.filelight
     kdePackages.kate
     kdePackages.kcolorchooser
+    kdePackages.kruler
     kdePackages.markdownpart
     kdePackages.plasma-login-manager
     keep-sorted
