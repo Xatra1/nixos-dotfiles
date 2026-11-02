@@ -110,16 +110,7 @@ in
     kwin-x11
   ];
 
-  security = {
-    polkit.enablePkexecWrapper = true; # needed for gparted to run
-
-    wrappers.btop = {
-      source = "/run/current-system/sw/bin/btop";
-      capabilities = "cap_perfmon+ep";
-      owner = "root";
-      group = "root";
-    };
-  };
+  security.polkit.enablePkexecWrapper = true; # needed for gparted to run
 
   systemd.tmpfiles.rules = [
     "Z /sys/class/powercap/intel-rapl:0/energy_uj 0444 root root - -"
