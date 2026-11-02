@@ -109,7 +109,6 @@ in
     elisa
     khelpcenter
     kwalletmanager
-    kwin-x11
     okular
     qrca
     sddm
