@@ -24,7 +24,7 @@ let
     self: super: {
       ironwail = super.ironwail.overrideAttrs (
         final: prev: {
-          launchFlags = "";
+          launchFlags = "/home/solarfire/games/ironwail";
         }
       );
     }
