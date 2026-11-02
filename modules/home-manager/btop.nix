@@ -19,6 +19,8 @@
 
       swap_disk = false;
       disks_filter = "exclude=/nix /home";
+
+      custom_gpu_name0 = builtins.elemAt config.hardwareInfo.gpuNames 0;
     };
   };
 }
