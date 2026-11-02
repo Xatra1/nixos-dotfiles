@@ -35,28 +35,6 @@ let
     hash = "sha256-WU+Vn9zP3zQpgJwPZEfwTazSDoB5Fp7HIqXtjmnfO4I=";
   }) { };
 
-  ventoy_overlay = (
-    self: super: {
-      ventoy = super.ventoy.overrideAttrs (
-        final: prev: {
-          version = "1.1.17";
-
-          src = pkgs.fetchurl {
-            url = "https://github.com/ventoy/Ventoy/releases/download/v${final.version}/ventoy-${final.version}-linux.tar.gz";
-            hash = "sha256-f7TtCM72prTTndGSYNjIApGnjf35r31GFXHiPLvEOAU=";
-          };
-
-          patches = [
-            (pkgs.fetchurl {
-              url = "https://codeberg.org/solarfire/nix-derivations/raw/branch/master/ventoy/000-nixos-sanitization.patch";
-              hash = "sha256-Wn37erHT0TuaPswObiXk8vCJ4UUG+aS5OIYqcRBuPNQ=";
-            })
-          ];
-        }
-      );
-    }
-  );
-
   btop = pkgs.btop.override {
     config.cudaSupport = true;
     config.rocmSupport = false; # needs to be explicitly disabled if cuda support is enabled?
@@ -66,14 +44,10 @@ in
   nixpkgs = {
     config = {
       allowUnfree = true;
-
-      permittedInsecurePackages = [
-        "ventoy-1.1.17"
-      ];
+      permittedInsecurePackages = [ "ventoy-1.1.18" ];
     };
 
     overlays = [
-      ventoy_overlay
       ioquake3_overlay
       ironwail_overlay
     ];
