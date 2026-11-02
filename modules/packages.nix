@@ -57,6 +57,7 @@ in
     # keep-sorted start
     bat
     btop
+    comma
     fastfetch
     firefox
     flatpak
