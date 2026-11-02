@@ -54,6 +54,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    # keep-sorted start
     bat
     btop
     fastfetch
@@ -70,6 +71,7 @@ in
     kdePackages.kcolorchooser
     kdePackages.markdownpart
     kdePackages.plasma-login-manager
+    keep-sorted
     kitty
     mpv
     neovim
@@ -89,25 +91,27 @@ in
     wl-clipboard
     xclicker
     zsh
+    # keep-sorted end
   ];
 
   fonts = {
     fontconfig.enable = true;
     fontDir.enable = true;
     enableDefaultPackages = true;
-
     packages = [ miracode-nerd-font ];
   };
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
-    sddm
-    khelpcenter
-    kwalletmanager
-    okular
-    qrca
+    # keep-sorted start
     drkonqi
     elisa
+    khelpcenter
+    kwalletmanager
     kwin-x11
+    okular
+    qrca
+    sddm
+    # keep-sorted end
   ];
 
   security.polkit.enablePkexecWrapper = true; # needed for gparted to run
