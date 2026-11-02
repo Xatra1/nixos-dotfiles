@@ -44,6 +44,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    # keep-sorted start
     bat
     btop
     discord
@@ -51,8 +52,8 @@ in
     ffmpeg
     flatpak
     gcc
-    git
     gimp
+    git
     gparted
     hyfetch
     ibus
@@ -63,6 +64,7 @@ in
     kdePackages.kcolorchooser
     kdePackages.markdownpart
     kdePackages.plasma-login-manager
+    keep-sorted
     kitty
     mpv
     neovim
@@ -83,6 +85,7 @@ in
     wine
     wl-clipboard
     zsh
+    # keep-sorted end
   ];
 
   fonts.packages = with pkgs; [
@@ -91,6 +94,7 @@ in
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    # keep-sorted start
     drkonqi
     elisa
     khelpcenter
@@ -98,6 +102,7 @@ in
     okular
     qrca
     sddm
+    # keep-sorted end
   ];
 
   security = {
