@@ -127,6 +127,7 @@ in
     dconf.enable = true;
     zsh.enable = true;
     steam.enable = true;
+    kde-pim.enable = false;
 
     neovim = {
       enable = true;
