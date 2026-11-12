@@ -10,7 +10,6 @@ in
       arRPC = true;
       hardwareAcceleration = true;
       staticTitle = true;
-      customTitleBar = true;
       badgesOnlyForMentions = true;
     };
 
