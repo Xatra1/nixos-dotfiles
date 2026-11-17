@@ -3,7 +3,7 @@
   options = {
     wallpaper = lib.mkOption {
       type = lib.types.str;
-      default = "/home/solarfire/Pictures/Wallpapers/72.jpg";
+      default = "/home/solarfire/Pictures/Wallpapers/44.jpg";
       description = "Absolute path to an image.";
     };
 
