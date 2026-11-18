@@ -74,6 +74,21 @@ in
           theme = "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/tokyo-night.json";
         };
 
+        TextReplace = {
+          enabled = true;
+
+          stringRules = [
+            {
+              name = "Replace twitter links with fixvx";
+              find = "https://x.com/";
+              replace = "https://fixvx.com/";
+              onlyIfIncludes = "";
+              scope = "myMessages";
+              id = "5aeded71-82f8-4b10-bdcc-df6459de1b3c";
+            }
+          ];
+        };
+
         WhoReacted = {
           enabled = true;
           clickableAvatars = false;
