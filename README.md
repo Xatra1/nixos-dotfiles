@@ -1,1 +1,1 @@
-You can build the ISO with `nh os build-image --image-variant iso --hostname nixiso`. The output file will be in `result/iso`.
+This branch has been discontinued and this branch remains only as an archive of the latest state of its configuration.
