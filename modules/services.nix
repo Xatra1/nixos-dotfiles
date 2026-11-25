@@ -56,6 +56,7 @@
 
     nix-serve = {
       enable = true;
+      package = pkgs.nix-serve-ng;
       port = 8080;
       secretKeyFile = "/home/solarfire/.local/share/nix-keys/secret";
     };

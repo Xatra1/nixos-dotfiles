@@ -112,7 +112,7 @@ in
     nh
     nicotine-plus
     nil
-    nix-serve
+    nix-serve-ng
     nixfmt
     nodejs-slim
     obs-studio
